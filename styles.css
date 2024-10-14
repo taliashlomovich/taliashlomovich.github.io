@@ -2,3 +2,7 @@
     float: right;
     padding: 5px;
 }
+
+figure figcaption {
+    text-align: center;
+}
