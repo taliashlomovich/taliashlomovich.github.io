@@ -4,85 +4,160 @@
     <head>
         <meta charset="utf-8">
 
-        <title>Talia Shlomovich</title>
+        <title>My Academic Website</title>
 
+        <!-- Google Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans|Source+Sans+3">
+
+        <!-- Internal CSS Styles -->
         <style> 
-            header {background-color: white;}
-            h1 {font-family: "Nunito Sans", sans-serif;}
-            h2 {font-family: "Nunito Sans", sans-serif;} 
-            h1, h2 {font-weight: 600;}
+            /* Basic Layout */
+            body {
+                display: grid;
+                grid-template-columns: 1fr 3fr; /* Sidebar and main content */
+                gap: 20px;
+                padding: 20px;
+                font-family: "Source Sans 3", sans-serif;
+                font-size: 16px;
+                line-height: 1.6;
+                background-color: #f7f9fc;
+            }
+
+            /* Header */
+            header {
+                grid-column: 1 / -1;
+                padding: 15px 40px;
+                background-color: white;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            header h1 {
+                font-family: "Nunito Sans", sans-serif;
+                font-weight: 600;
+                margin: 0;
+            }
+            header p {
+                font-size: 0.9em;
+                color: #555;
+                margin-top: 5px;
+            }
+
+            /* Sidebar for Contact */
+            aside {
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            aside p {
+                font-size: 0.9em;
+            }
+
+            /* Main Content Styling */
+            main {
+                padding: 20px;
+                background-color: #ffffff;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            h2 {
+                font-family: "Nunito Sans", sans-serif;
+                font-weight: 600;
+                color: #333;
+            }
+            p, ul {
+                margin-bottom: 20px;
+            }
+
+            /* Image Styling */
+            figure {
+                margin: 0;
+                text-align: center;
+            }
+            figure img {
+                border-radius: 8px;
+                width: 100%;
+                max-width: 225px;
+            }
+            figcaption {
+                font-size: 0.85em;
+                color: #777;
+                margin-top: 5px;
+            }
+
+            /* Links */
+            a {
+                color: #1a73e8;
+                text-decoration: none;
+            }
+            a:hover {
+                color: #0c47a1;
+                text-decoration: underline;
+            }
+
+            /* Footer */
+            footer {
+                grid-column: 1 / -1;
+                background-color: #f8f8f8;
+                padding: 15px;
+                text-align: center;
+                font-size: 14px;
+                color: #555;
+            }
         </style>
-        
-        <style>
-            body {font-family: "Source Sans 3", sans-serif;}
-            div {text-align: justify; text-justify: inter-word;}
-        </style>
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="styles.css">
 
     </head>
 
-    <body style = "padding-top: 10px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 16px";>
+    <body>
         
         <header>
-        <div><h1 style = "display: inline">Talia Shlomovich</h1><p style = "display: inline; float: right; margin-right: 40px; margin-bottom: 0"><strong>Email:</strong> ls3007 "at" hw "dot" ac "dot" uk</p></div>
-        <hr>
+            <h1>My Academic Website</h1>
+            <p>Email: ls3007 "at" hw "dot" ac "dot" uk</p>
         </header>
 
-        <br>
-        <figure class = "right-image">
-            <img
-            src = "Talia.jpeg"; 
-            height = "300px"; 
-            width = "225px";
-            >
-            <figcaption>Whilst graduating from Warwick!</figcaption>
-        </figure>
+        <aside>
+            <p><strong>Contact:</strong><br>Email: ls3007 "at" hw "dot" ac "dot" uk</p>
+        </aside>
 
-        <p style = "margin-top: 0px">
-        Hello! I am a first year PhD student at Heriot-Watt University
-        under the supervision of Matthew Cordes.
-        </p>
+        <main>
+            <figure>
+                <img src="Talia.jpeg" alt="Graduation photo">
+                <figcaption>Whilst graduating from Warwick!</figcaption>
+            </figure>
 
-        <p>
-        I have recently joined the 
-        <a href="https://www.macs.hw.ac.uk/~lc45/Conferences/MAXIMALS.html">Algebra, Geometry and Topology group</a> at Heriot-Watt.
-        I am also a part of the 
-        <a href = "https://www.agq-cdt.org/">EPSRC Centre for Doctoral Training in Algebra, Geometry and Quantum Fields</a> 
-        (AGQ CDT), 
-        in collaboration with the University of Edinburgh and the University of Glasgow.
-        </p>
-        
-        <h2>Research</h2>
-        <p>
-            My interests are in geometric group theory. In particular, I am looking forward to learning more about negatively curved spaces and their boundaries as well as generalisations of hyperbolic spaces.
-        </p>
+            <p>Hello! I am a first-year PhD student at Heriot-Watt University under the supervision of Matthew Cordes.</p>
 
-        <p>
-        Before this, I completed my Integrated Masters in Mathematics at the University of Warwick, where my dissertation on the isoperimetric spectrum was supervised by Robert Kropholler.
-        </p>
+            <p>
+                I have recently joined the 
+                <a href="https://www.macs.hw.ac.uk/~lc45/Conferences/MAXIMALS.html">Algebra, Geometry and Topology group</a> at Heriot-Watt.
+                I am also a part of the 
+                <a href="https://www.agq-cdt.org/">EPSRC Centre for Doctoral Training in Algebra, Geometry and Quantum Fields</a> 
+                (AGQ CDT), 
+                in collaboration with the University of Edinburgh and the University of Glasgow.
+            </p>
 
-        <h2>Papers</h2>
+            <h2>Research</h2>
+            <p>My interests are in geometric group theory. In particular, I am looking forward to learning more about negatively curved spaces and their boundaries as well as generalisations of hyperbolic spaces.</p>
+            <p>Before this, I completed my Integrated Masters in Mathematics at the University of Warwick, where my dissertation on the isoperimetric spectrum was supervised by Robert Kropholler.</p>
 
-        <p>Coming soon...</p>
+            <h2>Papers</h2>
+            <p>Coming soon...</p>
 
-        <h2>Teaching</h2>
-        <ul>
-            <li>October 2023 -- January 2024: <i>Graduate Teaching Assistant,</i> University of Warwick</li>
-        </ul>
+            <h2>Teaching</h2>
+            <ul>
+                <li>October 2023 -- January 2024: <i>Graduate Teaching Assistant,</i> University of Warwick</li>
+            </ul>
 
-        <h2>Upcoming talks</h2>
-
-        <ul>
-        <li>November 2024: MAXIMALS Seminar, <i>Quantitative Guessing Geodesics</i>, Heriot-Watt University</li>
-        <li>November 2024: Examples Showcase: <i>TBC</i>, University of Glasgow</li>
-        </ul>
-
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
+            <h2>Upcoming talks</h2>
+            <ul>
+                <li>November 2024: MAXIMALS Seminar, <i>Quantitative Guessing Geodesics</i>, Heriot-Watt University</li>
+                <li>November 2024: Examples Showcase: <i>TBC</i>, University of Glasgow</li>
+            </ul>
+        </main>
 
         <footer>
+            © 2024 Your Name | <a href="yourCV.pdf">Download CV</a>
         </footer>
     </body>
 </html>
+
