@@ -2,6 +2,11 @@ figure figcaption {
     text-align: center;
 }
 
+.right-image {
+    float: right;
+    padding: 5px;
+}
+
 aside ul {
     padding: 0;
 }
@@ -19,9 +24,4 @@ aside a {
 aside a:hover {
     color: #0c47a1;
     text-decoration: underline;
-}
-
-.right-image {
-    float: right;
-    padding: 5px;
 }
