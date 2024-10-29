@@ -25,3 +25,46 @@ aside a:hover {
     color: #0c47a1;
     text-decoration: underline;
 }
+
+/* Basic Color Scheme */
+body {
+    background-color: #f5f2f0; /* Warm neutral background */
+    color: #333333; /* Deep charcoal for main text */
+}
+
+/* Header and Sidebar */
+header, aside {
+    background-color: #f8e1e7; /* Soft blush for header and sidebar */
+    color: #333333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Headers and Section Titles */
+h1, h2 {
+    color: #d5a6bd; /* Muted dusty rose for headers */
+}
+
+/* Links and Interactive Elements */
+a {
+    color: #5a6e9c; /* Slate blue for links */
+    text-decoration: none;
+    font-weight: 600;
+}
+a:hover {
+    color: #333333; /* Darken on hover */
+    text-decoration: underline;
+}
+
+/* Button Style (Optional) */
+button {
+    background-color: #5a6e9c; /* Slate blue button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #333333; /* Dark charcoal on hover */
+}
