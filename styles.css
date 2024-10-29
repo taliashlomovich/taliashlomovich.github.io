@@ -6,3 +6,22 @@
 figure figcaption {
     text-align: center;
 }
+
+aside ul {
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+aside a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+aside a:hover {
+    color: #0c47a1;
+    text-decoration: underline;
+}
