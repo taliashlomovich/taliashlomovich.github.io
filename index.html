@@ -185,6 +185,19 @@
         </main>
 
         <footer>
+              <p id="last-modified"></p>
+
+                  <script>
+                    // Get the last modified date of the document
+                    const lastModified = new Date(document.lastModified);
+                
+                    // Format to display month and year
+                    const options = { year: 'numeric', month: 'long' };
+                    const formattedDate = lastModified.toLocaleDateString('en-US', options);
+                
+                    // Display in the paragraph element
+                    document.getElementById("last-modified").textContent = `Last modified: ${formattedDate}`;
+                  </script>
             <br>
         </footer>
     </body>
