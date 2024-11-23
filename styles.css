@@ -3,24 +3,18 @@ figure figcaption {
 }
 
 table {
-              border-collapse: collapse;
-              width: 90%;
-              max-width: 600px;
-              margin: 20px auto;
-              background-color: #ffffff;
-              border: 1px solid #ddd;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-collapse: collapse;
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             }
         
-            td {
-              padding: 15px;
-              text-align: center;
-              border: 1px solid #ddd;
-              color: #333;
-            }
-        
-            }
-        
-            tr:hover {
-              background-color: #f1f1f1;
+td {
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #ddd;
+        color: #333;
             }
