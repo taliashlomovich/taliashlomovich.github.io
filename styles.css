@@ -4,7 +4,7 @@ figure figcaption {
 
 table {
               border-collapse: collapse;
-              width: 80%;
+              width: 90%;
               max-width: 600px;
               margin: 20px auto;
               background-color: #ffffff;
@@ -19,8 +19,6 @@ table {
               color: #333;
             }
         
-            tr:nth-child(even) {
-              background-color: #f9f9f9;
             }
         
             tr:hover {
