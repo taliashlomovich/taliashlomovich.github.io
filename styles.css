@@ -1,3 +1,28 @@
 figure figcaption {
     text-align: center;
 }
+
+table {
+              border-collapse: collapse;
+              width: 80%;
+              max-width: 600px;
+              margin: 20px auto;
+              background-color: #ffffff;
+              border: 1px solid #ddd;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        
+            td {
+              padding: 15px;
+              text-align: center;
+              border: 1px solid #ddd;
+              color: #333;
+            }
+        
+            tr:nth-child(even) {
+              background-color: #f9f9f9;
+            }
+        
+            tr:hover {
+              background-color: #f1f1f1;
+            }
