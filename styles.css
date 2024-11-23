@@ -8,7 +8,7 @@ table {
         border-collapse: collapse;
             }
         
-td {
+tr {
         text-align: left;
         padding: 5px;
         color: #333;
