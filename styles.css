@@ -5,8 +5,7 @@ figure figcaption {
 table {
         border-collapse: collapse;
         width: 90%;
-        max-width: 600px;
-        margin: 20px auto;
+        margin: 5px auto;
         background-color: #ffffff;
         border: 1px solid #ddd;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
