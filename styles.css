@@ -3,10 +3,10 @@ figure figcaption {
 }
 
 table {
+        table-layout:auto;
         margin: 5px auto;
         background-color: #ffffff;
         border-collapse: collapse;
-        table-layout:auto;
             }
         
 tr {
