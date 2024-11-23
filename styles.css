@@ -3,17 +3,15 @@ figure figcaption {
 }
 
 table {
-        border-collapse: collapse;
         margin: 5px auto;
         background-color: #ffffff;
         border-top: 1px solid #ddd;
         border-bottom: 1px solid #ddd;
+        border-collapse: collapse;
             }
         
 td {
         text-align: left;
         padding: 5px;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
         color: #333;
             }
