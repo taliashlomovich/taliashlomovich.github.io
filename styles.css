@@ -9,7 +9,7 @@ figure figcaption {
 table {
         table-layout:auto;
         margin: 5px auto;
-        background-color: #ffffff;
+        background-color: inherit;
         border-collapse: collapse;
             }
         
