@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Base Layout and Colors */
+/* Base Layout and Colours */
 body {
     background: linear-gradient(to bottom, #F5F2F0, #F3E4E5); /* Soft beige shift to pink */
     margin-left: 270px; /* Ensure space for the sidebar */
@@ -14,6 +14,48 @@ body {
     gap: 20px;
     padding: 20px;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Main Content */
+main {
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 0; /* Adjust for sidebar width */
+    width: calc(100vw - 270px); /* Ensure content area fits after sidebar */
+    max-width: 100%; /* Prevent content area from being too wide */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Main Content Headings */
+h2 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    color: #660016; /* Dark red for headers */
+}
+
+/* Image Styling */
+img {
+    max-width: 100%; /* Ensures the image does not exceed its container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes inline spacing/margin issues */
+}
+
+.right-image {
+    float: right; /* Aligns image to the right */
+    width: 20vw !important;
+    max-width: 250px !important;
+}
+
+.right-image-mathop {
+    float: right;
+    width: 25vw !important;
+    max-width: 350px !important;
+}
+
+figure figcaption {
+    text-align: center;
 }
 
 /* Header */
@@ -38,6 +80,17 @@ header p {
     font-size: 1.1em;
     color: #333333;
     margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%; /* Ensure footer spans full width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Sidebar */
@@ -78,58 +131,7 @@ aside a:hover {
     text-decoration: underline;
 }
 
-/* Main Content */
-main {
-    background-color: rgba(255,255,255,0.8);
-    padding: 20px;
-    border-radius: 8px;
-    margin-left: 0; /* Adjust for sidebar width */
-    width: calc(100vw - 270px); /* Ensure content area fits after sidebar */
-    max-width: 100%; /* Prevent content area from being too wide */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    box-sizing: border-box; /* Include padding in width calculation */
-}
-
-/* Main Content Headings */
-h2 {
-    font-family: "Work Sans", sans-serif;
-    font-weight: 600;
-    color: #660016; /* Dark red for headers */
-}
-
-/* Links */
-a {
-    color: #427dc9;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a:hover {
-    color: #333333;
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    background-color: rgba(255,255,255,0.8);
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 8px;
-    width: 100%; /* Ensure footer spans full width */
-    box-sizing: border-box; /* Include padding in width calculation */
-}
-
-img {
-    max-width: 100%; /* Ensures the image does not exceed its container */
-    height: auto; /* Maintains the aspect ratio */
-    display: block; /* Removes inline spacing/margin issues */
-}
-
-figure figcaption {
-    text-align: center;
-}
-
+/* Table Styling */
 table {
         table-layout:auto;
         margin: 5px auto;
@@ -186,4 +188,16 @@ tr {
 
 .sidebar ul li a:hover {
   background-color: rgb(162,63,87,0.6);
+}
+
+/* Links */
+a {
+    color: #427dc9;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #333333;
+    text-decoration: underline;
 }
