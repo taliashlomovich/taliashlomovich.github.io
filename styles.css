@@ -100,16 +100,16 @@ h2 {
 /* Image Styling */
 .right-image {
     float: right; /* Aligns image to the right */
-    width: 20vw;
-    max-width: 250px;
-    height: auto;
+    width: 20vw !important;
+    max-width: 250px !important;
+    height: auto !important;
 }
 
 .right-image-mathop {
     float: right;
-    width: 25vw; 
-    max-width: 350px;
-    height: auto;
+    width: 25vw !important;
+    max-width: 350px !important;
+    height: auto !important;
 }
 
 /* Links */
