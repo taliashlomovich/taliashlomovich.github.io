@@ -39,7 +39,9 @@ h2 {
 img {
     max-width: 100%; /* Ensures the image does not exceed its container */
     height: auto; /* Maintains the aspect ratio */
-    display: block; /* Removes inline spacing/margin issues */
+    display: inline-block; /* Removes inline spacing/margin issues */
+    margin: 0;
+    padding: 0;
 }
 
 .right-image {
