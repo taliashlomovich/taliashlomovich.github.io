@@ -23,11 +23,6 @@ tr {
         border-right: none;
             }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 /* Sidebar Styling */
 .sidebar {
   width: 250px;
