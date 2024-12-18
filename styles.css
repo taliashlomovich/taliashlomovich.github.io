@@ -50,8 +50,8 @@ img {
     max-width: 250px !important;
 }
 
-.right-image-mathop {
-    float: right;
+.left-image-mathop {
+    float: left;
     width: 25vw !important;
     max-width: 350px !important;
 }
