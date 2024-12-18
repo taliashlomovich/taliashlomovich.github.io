@@ -119,6 +119,13 @@ footer {
     width: 100%; /* Ensure footer spans full width */
     box-sizing: border-box; /* Include padding in width calculation */
 }
+
+img {
+    max-width: 100%; /* Ensures the image does not exceed its container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes inline spacing/margin issues */
+}
+
 figure figcaption {
     text-align: center;
 }
