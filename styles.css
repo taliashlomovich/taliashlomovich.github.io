@@ -185,11 +185,11 @@ tr {
   font-size: 18px;
   display: block;
   padding: 10px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
 .sidebar ul li a:hover {
-  background-color: rgb(155,189,199,0.8);
+  background-color: rgb(155,189,199,1
 }
 
 /* Links */
