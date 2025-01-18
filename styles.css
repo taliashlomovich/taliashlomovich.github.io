@@ -4,7 +4,7 @@ html {
 
 /* Base Layout and Colours */
 body {
-    background: linear-gradient(to bottom, #F5F2F0, #E0E7EB); /* Soft beige fade to blue */
+    background: #F5F2F0; /* Soft beige */
     margin-left: 270px; /* Ensure space for the sidebar */
     color: #333333; /* Deep charcoal for main text */
     font-family: "Source Sans 3", sans-serif;
