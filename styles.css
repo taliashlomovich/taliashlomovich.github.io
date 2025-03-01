@@ -98,7 +98,7 @@ footer {
 /* Sidebar */
 aside {
     background-color: rgba(255,255,255,0.8);
-    color: #C8A2C8;
+    color: rgba(200,162,200,1);
     padding: 20px;
     border-radius: 8px;
     position: fixed;
