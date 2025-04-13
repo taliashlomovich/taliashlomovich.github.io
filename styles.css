@@ -30,9 +30,9 @@ main {
 
 /* Main Content Headings */
 h2 {
-    font-family: "Work Sans", sans-serif;
+    font-family: "Noto Serif Japanese", sans-serif;
     font-weight: 600;
-    color: #660016; /* Dark red for headers */
+    color: #000000; /* Black for headers */
 }
 
 /* Image Styling */
