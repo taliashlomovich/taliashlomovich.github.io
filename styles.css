@@ -12,8 +12,6 @@ body {
     display: grid;
     padding: 20px;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    margin-right: 50px;
-    margin-left: 50px;
 }
 
 /* Main Content */
@@ -23,7 +21,7 @@ br {
 }
 
 main {
-    padding: 10px;
+    padding: 40px;
     margin-right: 50px;
     margin-left: 50px;
     border-radius: 8px;
