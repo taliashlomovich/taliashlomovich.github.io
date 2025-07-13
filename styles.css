@@ -22,7 +22,7 @@ br {
 }
 
 main {
-    padding: 20px;
+    padding: 100px;
     border-radius: 8px;
     width: 100vw; /* Ensure content area fits*/
     max-width: 100%; /* Prevent content area from being too wide */
