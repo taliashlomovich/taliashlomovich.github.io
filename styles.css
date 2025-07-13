@@ -10,9 +10,9 @@ body {
     font-size: 18px;
     line-height: 1.6;
     display: grid;
-    padding: 20px;
+    padding: 10px;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    margin: 0px 50px 10px 50px;
+    margin: 0px 60px 10px 60px;
 }
 
 /* Main Content */
