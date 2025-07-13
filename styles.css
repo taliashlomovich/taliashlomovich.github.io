@@ -5,7 +5,7 @@ html {
 /* Base Layout and Colours */
 body {
     background: #FCFCFC; /* Soft beige */
-    color: #333333; /* Deep charcoal for main text */
+    color: #333333; /* Soft black for main text */
     font-family: "Source Sans 3", sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -34,7 +34,7 @@ main {
 h2 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
-    color: #333; /* Soft black for headers */
+    color: #333; 
 }
 
 /* Image Styling */
@@ -76,7 +76,7 @@ header h1 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
     font-size: 48px;
-    color: #333; /* Black */
+    color: #333;
     margin: 0;
 }
 
