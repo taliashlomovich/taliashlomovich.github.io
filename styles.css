@@ -4,7 +4,7 @@ html {
 
 /* Base Layout and Colours */
 body {
-    background: #F5F2F0; /* Soft beige */
+    background: #FCFCFC; /* Soft beige */
     color: #333333; /* Deep charcoal for main text */
     font-family: "Source Sans 3", sans-serif;
     font-size: 18px;
@@ -22,7 +22,6 @@ br {
 }
 
 main {
-    background-color: rgba(255,255,255,0.8);
     padding: 20px;
     border-radius: 8px;
     width: 100vw; /* Ensure content area fits*/
