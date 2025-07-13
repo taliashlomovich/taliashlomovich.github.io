@@ -35,7 +35,7 @@ main {
 
 /* Main Content Headings */
 h2 {
-    font-family: "EB Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
     font-weight: 600;
     color: #000000; /* Black for headers */
 }
@@ -77,8 +77,8 @@ header {
 }
 
 header h1 {
-    font-family: "EB Garamond", serif;
-    font-weight: 500;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
     color: #000000; /* Black */
     margin: 0;
 }
