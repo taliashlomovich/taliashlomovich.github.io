@@ -25,7 +25,7 @@ main {
     padding: 40px;
     margin: 0px 50px 10px 50px;
     border-radius: 8px;
-    width: 100vw; /* Ensure content area fits*/
+    width: 100%; /* Ensure content area fits*/
     max-width: 100%; /* Prevent content area from being too wide */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box; /* Include padding in width calculation */
