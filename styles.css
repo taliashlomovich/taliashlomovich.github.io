@@ -12,6 +12,7 @@ body {
     display: grid;
     padding: 20px;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0px 50px 10px 50px;
 }
 
 /* Main Content */
@@ -22,8 +23,7 @@ br {
 
 main {
     padding: 40px;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin: 0px 50px 10px 50px;
     border-radius: 8px;
     width: 100vw; /* Ensure content area fits*/
     max-width: 100%; /* Prevent content area from being too wide */
