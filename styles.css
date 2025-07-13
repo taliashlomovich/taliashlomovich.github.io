@@ -22,7 +22,8 @@ br {
 }
 
 main {
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
     border-radius: 8px;
     width: 100vw; /* Ensure content area fits*/
     max-width: 100%; /* Prevent content area from being too wide */
