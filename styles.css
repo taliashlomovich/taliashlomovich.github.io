@@ -102,16 +102,18 @@ footer {
 
 /* Sidebar */
 aside {
-    background-color: rgba(255,255,255,0.8);
-    color: rgba(200,162,200,1);
+    background: #F4F9FF; /* Light pastel blue for a softer, modern look */
+    color: #5A6E83; /* Muted, dark grayish blue for text */
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 15px; /* Rounded corners for a modern, friendly appearance */
     position: fixed;
-    top: 80px; /* Adjust to make room for header */
+    top: 80px;
     left: 0;
-    width: 250px; /* Set fixed width for sidebar */
-    height: calc(100vh - 80px); /* Full height minus header */
-    overflow-y: auto; /* Allow sidebar to scroll if needed */
+    width: 250px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
+    transition: all 0.3s ease; /* Smooth transition for interactive changes */
 }
 
 aside h2 {
