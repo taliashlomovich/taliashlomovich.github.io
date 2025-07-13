@@ -71,6 +71,7 @@ header {
     border-radius: 8px;
     width: 100%; /* Ensure header spans full width */
     box-sizing: border-box; /* Include padding in width calculation */
+    border-bottom: 1px solid #ddd;
 }
 
 header h1 {
@@ -85,7 +86,6 @@ header p {
     font-size: 1.1em;
     color: #333333;
     margin-top: 5px;
-    border-bottom: 1px solid #ddd;
 }
 
 /* Footer */
