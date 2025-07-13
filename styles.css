@@ -33,7 +33,7 @@ main {
 /* Main Content Headings */
 h2 {
     font-family: "Cormorant Garamond", serif;
-    font-weight: 500;
+    font-weight: 600;
     color: #333; 
 }
 
@@ -74,7 +74,7 @@ header {
 
 header h1 {
     font-family: "Cormorant Garamond", serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 48px;
     color: #333;
     margin: 0;
