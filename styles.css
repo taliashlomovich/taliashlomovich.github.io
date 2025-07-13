@@ -27,7 +27,7 @@ main {
     padding: 20px;
     border-radius: 8px;
     margin-left: 0; /* Adjust for sidebar width */
-    width: calc(100vw - 270px); /* Ensure content area fits after sidebar */
+    width: 100vw; /* Ensure content area fits after sidebar */
     max-width: 100%; /* Prevent content area from being too wide */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     box-sizing: border-box; /* Include padding in width calculation */
@@ -99,36 +99,6 @@ footer {
     width: 100%; /* Ensure footer spans full width */
     box-sizing: border-box; /* Include padding in width calculation */
 }
-
-/* Sidebar */
-aside {
-    background: #F4F9FF; /* Light pastel blue for a softer, modern look */
-    color: #5A6E83; /* Muted, dark grayish blue for text */
-    padding: 20px;
-    border-radius: 15px; /* Rounded corners for a modern, friendly appearance */
-    position: fixed;
-    top: 80px;
-    left: 0;
-    width: 250px;
-    height: calc(100vh - 80px);
-    overflow-y: auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
-    transition: all 0.3s ease; /* Smooth transition for interactive changes */
-}
-
-/* Sidebar Styling */
-.sidebar {
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #212B0C;
-  color: white;
-  padding: 20px;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-}
-
 
 aside h2 {
     color: #003366;
