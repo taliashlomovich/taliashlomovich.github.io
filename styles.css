@@ -24,7 +24,7 @@ br {
 main {
     padding: 50px;
     margin-right: 50px;
-    border-radius: 8px;
+    -radius: 8px;
     width: 100vw; /* Ensure content area fits*/
     max-width: 100%; /* Prevent content area from being too wide */
     overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -79,13 +79,13 @@ header h1 {
     font-size: 48px;
     color: #333;
     margin: 0;
-    border-bottom: 1px solid black;
 }
 
 header p {
     font-size: 1.1em;
     color: #333333;
     margin-top: 5px;
+    border-bottom: 1px solid #ddd;
 }
 
 /* Footer */
