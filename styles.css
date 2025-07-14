@@ -81,6 +81,10 @@ figure {
   margin: 1em 0;
 }
 
+figcaption {
+  color: #8b898c;
+}
+
 img.profile-pic {
   margin-top: 1rem;
   margin-bottom: 1rem;
