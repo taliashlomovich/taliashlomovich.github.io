@@ -72,6 +72,13 @@ img.profile-pic {
   margin-right: auto;
 }
 
+img.figure-small {
+  width: 80px;
+  height: auto;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
 section {
   margin-bottom: 3.5rem;
 }
@@ -115,11 +122,4 @@ p {
   font-weight: 500;
   font-size: 1.1rem;
   margin-top: 0;
-}
-
-.figure-small {
-  width: 80px;
-  height: auto;
-  display: inline-block;
-  margin: 1rem 0;
 }
