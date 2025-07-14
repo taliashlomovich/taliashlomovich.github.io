@@ -25,12 +25,14 @@ body {
 .icon-label {
   display: inline-flex;
   align-items: center; /* vertical alignment */
-  gap: 0.4em;           /* spacing between icon and label */
+  gap: 1em;           /* spacing between icon and label */
   font-size: 18px;
+  line-height: 1;
 }
 
 .icon-label ion-icon {
   font-size: 1.2em;     /* adjust to match text size visually */
+  vertical-align: middle;
 }
 
 header {
