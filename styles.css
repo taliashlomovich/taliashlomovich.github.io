@@ -22,14 +22,15 @@ body {
   line-height: 1.6;
 }
 
-.icon {
- display: inline-block;
- vertical-align: middle;
+.icon-label {
+  display: inline-flex;
+  align-items: center; /* vertical alignment */
+  gap: 0.4em;           /* spacing between icon and label */
+  font-size: 18px;
 }
 
-.text{
-  display: inline-block;
-  vertical-align: middle;
+.icon-label ion-icon {
+  font-size: 1.2em;     /* adjust to match text size visually */
 }
 
 header {
