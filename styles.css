@@ -69,7 +69,8 @@ figure {
 }
 
 img.profile-pic {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 150px;
   border-radius: 20px;
   box-shadow: 0 6px 18px rgba(62, 59, 64, 0.1);
@@ -80,7 +81,8 @@ img.profile-pic {
 }
 
 img.figure-small {
-  margin-top: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   width: 400px;
   border-radius: 20px;
   box-shadow: 0 6px 18px rgba(62, 59, 64, 0.1);
