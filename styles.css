@@ -161,4 +161,5 @@ footer {
   align-items: center;     /* vertical */
   height: 80px;            /* or whatever height you use */
   text-align: center;
+  font-size: 0.9em;
 }
