@@ -24,7 +24,7 @@ body {
 
 header {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   position: relative;
 }
 
@@ -136,5 +136,6 @@ p {
 }
 
 .footer {
-    text-align: center;
+    width: 100%;
+    margin: auto 0;
 }
