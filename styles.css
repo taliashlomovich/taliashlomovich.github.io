@@ -2,17 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
---primary-bg: #ffffff;
---accent-color: #557a95; /* muted blue */
---secondary-color: #e8f0f2; /* soft cool gray-blue */
---text-color: #2e2e2e;
---header-color: #1c3b57;
---link-hover: #769fb6;
-
 /* Base Layout and Colours */
 body {
     background: #FCFCFC; /* Soft beige */
-    var(--text-color) 
+    color: #333333; /* Soft black for main text */
     font-family: "Source Sans 3", sans-serif;
     font-size: 18px;
     line-height: 1.6;
@@ -42,7 +35,7 @@ main {
 h2 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
-    color: var(--header-color); 
+    color: #333; 
 }
 
 /* Image Styling */
@@ -85,7 +78,7 @@ header h1 {
     font-family: "Cormorant Garamond", serif;
     font-weight: 500;
     font-size: 48px;
-    color: var(--header-color);
+    color: #333;
     margin: 0;
 }
 
@@ -173,22 +166,9 @@ tr {
 
 /* Links */
 a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: var(--link-hover);
-  text-decoration: underline;
-}
-
-section {
-  padding: 2em 1em;
-  background-color: var(--primary-bg);
-  border-bottom: 1px solid var(--secondary-color);
-  max-width: 800px;
-  margin: 0 auto;
+    color: #427dc9;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
