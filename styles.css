@@ -61,6 +61,13 @@ p.intro {
   margin-right: auto;
 }
 
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
+}
+
 img.profile-pic {
   margin-top: 2.5rem;
   width: 150px;
