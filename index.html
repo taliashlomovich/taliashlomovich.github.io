@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Talia Shlomovich</title>
+        <link rel="icon" type="image/x-icon" href="T%20Favicon.ico"/>
+        <link rel="apple-touch-icon" href="T%20Favicon.ico"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Nunito+Sans|Source+Sans+3">
+            
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <header>
+            <h1>Talia Shlomovich</h1>
+            <span class="icon-label">
+            <a href="mailto:ls3007@hw.ac.uk">
+            <ion-icon name="mail"></ion-icon> 
+            </a>
+            <span> ls3007 'at' hw.ac.uk </span>
+            </span>
+        </header>
+        
+        <main>
+            <p>
+            <figure>
+                <img src="Talia.jpeg" alt="Talia Shlomovich" class="profile-pic" />
+                <figcaption>Whilst graduating from Warwick!</figcaption>
+            </figure>
+            </p>
+            <p>Hello! I am a first year PhD student at Heriot-Watt University under the supervision of <a href="https://www.mcordes.com/">Matthew Cordes</a>.</p>
+                
+            <p>
+                I am a part of the 
+                <a href="https://www.macs.hw.ac.uk/~lc45/Conferences/MAXIMALS.html">Algebra, Geometry and Topology group</a> at Heriot-Watt.
+                I am also a student in the
+                <a href="https://www.agq-cdt.org/">EPSRC Centre for Doctoral Training in Algebra, Geometry and Quantum Fields</a> 
+                (AGQ CDT), 
+                which is in collaboration with the University of Edinburgh and the University of Glasgow.
+            </p>
+
+            <br>
+            <h2 id="research">Research</h2>
+            <p>
+                My interests are in geometric group theory. In particular, I am looking forward to learning more about negatively curved spaces and their boundaries as well as generalisations of hyperbolic spaces.
+            </p>
+
+            <p>
+                Before this, I completed my Integrated Masters in Mathematics at the University of Warwick, where my dissertation on the isoperimetric spectrum was supervised by <a href="http://www.robertkropholler.com/">Robert Kropholler</a>.
+            </p>
+
+            <br>
+            <h2 id="papers">Papers</h2>
+           <ol>
+               <li>Pre-print: <a href = "https://arxiv.org/abs/2410.21525">A Quantitative Guessing Geodesics Theorem</a> (Summer project supervised by <a href="https://hpetyt.github.io">Harry Petyt</a> and <a href="https://www.davidespriano.com/index.html">Davide Spriano</a>)</li>
+           </ol>
+
+            <br>
+            <h2 id="talks">Talks</h2>
+           <ul>
+               <li>12.02.2025, "Quantitative Guessing Geodesics", MAXIMALS Seminar, University of Edinburgh & Heriot-Watt</li>
+               <li>29.11.2024, "Counting Ends of Groups", AGQ Examples Showcase, University of Glasgow</li>
+           </ul>
+             
+            <br>
+            <h2 id="teaching">Teaching</h2>
+            <ul>
+                <li>October 2023 – January 2024: Graduate Teaching Assistant, University of Warwick</li>
+            </ul>
+
+            <br>
+             <h2 id="conferences">Conferences attended</h2>
+            <ul>
+                <li>July 2025: Non-Positive Curvature and its Applications, Isaac Newton Institute, University of Cambridge </li>
+                <li>April 2025: Young Geometric Group Theory XIII, University of Copenhagen, Denmark</li>
+            </ul>
+
+            <br>
+            <h2 id="misc">Other</h2>
+            <p>
+                I'm currently involved in a few exciting projects! At the moment, I'm helping organise the AGQ Conference as part of the student committee.
+            </p>
+             <p>
+                 Here is our first year CDT group project on <a href="GroupProject.pdf" target="_blank">Actions of Groups on Trees</a>, with Sean O'Brien, Alicja Pietrzak and Lorna Richardson. 
+             </p>  
+
+            <p>
+                I also participated in a performance of <a href="https://sites.google.com/view/academic-scenes/home">Mathopoly</a>, a play exploring academic dystopia.
+            </p>
+                <figure>
+                    <img src="Mathopoly4.jpeg" alt="Mathopoly cast photo" class ="figure-small">
+                    <figcaption>The Mathopoly cast: Cassia, Oli, Giorgio, Emanuel, Sophie, João and I (PhD students from Edinburgh and Heriot-Watt).</figcaption>
+                </figure>
+        </main>
+
+        <footer>
+              <p id="last-modified"></p>
+                  <script>
+                    // Get the last modified date of the document
+                    const lastModified = new Date(document.lastModified);
+                
+                    // Format to display month and year
+                    const options = { year: 'numeric', month: 'long' };
+                    const formattedDate = lastModified.toLocaleDateString('en-US', options);
+                
+                    // Display in the paragraph element
+                    document.getElementById("last-modified").textContent = `Last updated: ${formattedDate}`;
+                  </script>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,151 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #f9f7f7;
+  --primary-color: #8a7ca9; /* muted lavender */
+  --secondary-color: #a3b18a; /* sage green (not currently in use) */
+  --accent-color: #f4c9c9; /* pale peach */
+  --text-color: #3e3b40;
+}
+
+body{
+  margin: 0;
+  padding: 2rem 1rem 4rem 1rem;
+  background-color: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.icon-label {
+  display: inline-flex;
+  align-items: center; /* vertical alignment */
+  gap: 1em;           /* spacing between icon and label */
+  font-size: 18px;
+  line-height: 1;
+}
+
+.icon-label ion-icon {
+  font-size: 1.2em;     /* adjust to match text size visually */
+  vertical-align: middle;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 0rem;
+  position: relative;
+}
+
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 3.4rem;
+  margin-bottom: 0.3rem;
+  color: var(--primary-color);
+  letter-spacing: 0.02em;
+}
+
+p.intro {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--secondary-color);
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
+}
+
+figcaption {
+  color: #8b898c;
+  font-size:0.9em;
+}
+
+img.profile-pic {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 150px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(62, 59, 64, 0.1);
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.figure-small {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(62, 59, 64, 0.1);
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  margin-bottom: 3.5rem;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 2.1rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 0.2rem;
+  max-width: max-content;
+}
+
+ul, ol {
+  list-style-type: disc;
+  padding-left: 1.4rem;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+li {
+  margin-bottom: 0.7rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1.8px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+a:hover {
+  border-color: var(--accent-color);
+}
+
+p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  height: 80px;            
+  text-align: center;
+  font-size: 0.9em;
+}
