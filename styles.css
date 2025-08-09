@@ -3,10 +3,10 @@ html {
 }
 
 :root {
-  --bg-color: #f9f7f7;
-  --primary-color: #8a7ca9; /* muted lavender */
+  --bg-color: #fff8ed;
+  --primary-color: #9a7fd1; /* muted lavender */
   --secondary-color: #a3b18a; /* sage green (not currently in use) */
-  --accent-color: #f4c9c9; /* pale peach */
+  --accent-color: #F2ABC2; /* pale peach */
   --text-color: #3e3b40;
 }
 
@@ -43,8 +43,8 @@ header {
 
 
 h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
+  font-family: 'Crimson Text', serif;
+  font-weight: 500;
   font-size: 3.4rem;
   margin-bottom: 0.3rem;
   color: var(--primary-color);
@@ -62,14 +62,28 @@ p.intro {
 
 figure {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   margin: 1em 0;
+  overflow: hidden;
 }
 
-figcaption {
-  color: #8b898c;
-  font-size:0.9em;
+figcaption-one, figcaption-two {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 0.9em;
+  color: #3e3b40;
+  text-align: center;
+  opacity: 0;  /* Hidden by default */
+  transition: opacity 0.3s ease;
+  /*padding: 0.5em;*/
+  max-width: 100%;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 img.profile-pic {
@@ -80,8 +94,8 @@ img.profile-pic {
   box-shadow: 0 6px 18px rgba(62, 59, 64, 0.1);
   object-fit: cover;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  overflow: hidden;
+  transition: filter 0.3s ease;
 }
 
 img.figure-small {
@@ -94,6 +108,8 @@ img.figure-small {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
+  transition: filter 0.3s ease;
 }
 
 section {
@@ -101,8 +117,8 @@ section {
 }
 
 h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
+  font-family: 'Crimson Text', serif;
+  font-weight: 500;
   font-size: 2.1rem;
   margin-bottom: 0.8rem;
   color: var(--primary-color);
@@ -149,3 +165,17 @@ footer {
   text-align: center;
   font-size: 0.9em;
 }
+
+figure img:hover {
+  filter: opacity(0.3);
+}
+
+figure img.profile-pic:hover + figcaption-one {
+  opacity: 1;
+}
+
+figure img:hover + figcaption-two {
+  opacity: 1;
+}
+
+
