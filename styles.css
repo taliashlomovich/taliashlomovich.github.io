@@ -51,6 +51,7 @@ h1 {
   letter-spacing: 0.02em;
 }
 
+/* This part is not currently in use
 p.intro {
   font-size: 1.15rem;
   font-style: italic;
@@ -58,6 +59,14 @@ p.intro {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
+}
+*/
+
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 4.5rem;
+  margin-top: 0.5rem;
 }
 
 figure {
@@ -112,18 +121,20 @@ img.figure-small {
   transition: filter 0.3s ease;
 }
 
+/*
 section {
   margin-bottom: 3.5rem;
 }
+*/
 
 h2 {
   font-family: 'Crimson Text', serif;
   font-weight: 500;
   font-size: 2.1rem;
-  margin-bottom: 0.8rem;
+  /*margin-bottom: 0.8rem;*/
   color: var(--primary-color);
   border-bottom: 3px solid var(--accent-color);
-  padding-bottom: 0.2rem;
+  /*padding-bottom: 0.2rem;*/
   max-width: max-content;
 }
 
@@ -145,6 +156,13 @@ a {
   font-weight: 600;
   border-bottom: 1.8px solid transparent;
   transition: border-color 0.3s ease;
+}
+
+.quick-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1.8px solid var(--accent-color);
 }
 
 a:hover {
