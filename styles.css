@@ -12,8 +12,8 @@ html {
 .darkmode{
   --bg-color: #181A1B;      /* blue-black  */
   --primary-color: #9A7FD1; /* muted lavender */
-  --accent-color: #721231;  /* dark pink */
-  --text-color: #C1BCAA;    /* beige */
+  --accent-color: #D292A6;  /* dark pink */
+  --text-color: #BAB4AB;    /* neutral */
 }
 
 body{
@@ -214,6 +214,7 @@ figure img:hover + figcaption-two {
   position: fixed;
   top: 20px;
   right: 20px;
+  border:none;
 }
 
 #theme-switch svg{
