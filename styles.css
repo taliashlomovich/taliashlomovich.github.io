@@ -59,7 +59,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--bg-color);
+  background: linear-gradient(to bottom, #f9f5f8, #f7f0f5);
   backdrop-filter: blur(6px);
   z-index: 1000;
 }
