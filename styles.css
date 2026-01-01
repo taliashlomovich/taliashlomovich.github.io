@@ -13,14 +13,14 @@ html {
 
 :root {
   --bg-color: #f8f7f5;
-  --primary-color: #812EFF;
+  --primary-color: #8a0653;
   --accent-color: #f2abc2;
   --text-color: #3e3b40;
 }
 
 .darkmode {
   --bg-color: #181a1b;
-  --primary-color: #6739E5;
+  --primary-color: #8a0653;
   --accent-color: #d292a6;
   --text-color: #c6c1bb;
 }
