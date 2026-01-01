@@ -1,235 +1,280 @@
+/* =========================
+   Fonts
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+/* =========================
+   Base + Theme Variables
+========================= */
+
 html {
   scroll-behavior: smooth;
 }
 
 :root {
-  --bg-color: #FBF7F5;      /* pinkish white  */
-  --primary-color: #9A7FD1; /* muted lavender */
-  --accent-color: #F2ABC2;  /* pale pink */
-  --text-color: #3E3B40;    /* dark grey */
+  --bg-color: #fbf7f5;
+  --primary-color: #6b5bd6;
+  --accent-color: #f2abc2;
+  --text-color: #2f2d32;
 }
 
-.darkmode{
-  --bg-color: #181A1B;      /* blue-black  */
-  --primary-color: #9A7FD1; /* muted lavender */
-  --accent-color: #D292A6;  /* dark pink */
-  --text-color: #BAB4AB;    /* neutral */
+.darkmode {
+  --bg-color: #181a1b;
+  --primary-color: #9a8cff;
+  --accent-color: #d292a6;
+  --text-color: #c6c1bb;
 }
 
-body{
+/* =========================
+   Body + Global Typography
+========================= */
+
+body {
   margin: 0;
-  padding: 2rem 1rem 4rem 1rem;
   background-color: var(--bg-color);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   color: var(--text-color);
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-.icon-label {
-  display: inline-flex;
-  align-items: center; /* vertical alignment */
-  gap: 1em;           /* spacing between icon and label */
-  font-size: 18px;
-  line-height: 1;
-}
-
-.icon-label ion-icon {
-  font-size: 1.2em;     /* adjust to match text size visually */
-  vertical-align: middle;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 0rem;
-  position: relative;
-}
-
-
-h1 {
-  font-family: 'Crimson Text', serif;
-  font-weight: 500;
-  font-size: 3.0rem;
-  margin-bottom: 0.3rem;
-  color: var(--primary-color);
-  letter-spacing: 0.02em;
-}
-
-/* This part is not currently in use
-p.intro {
-  font-size: 1.15rem;
-  font-style: italic;
-  color: var(--secondary-color);
-  max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-}
-*/
-
-.quick-links {
-  display: flex;
-  justify-content: center;
-  gap: 4.0rem;
-  margin-top: 0rem;
-}
-
-figure {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  margin: 1em 0;
-  overflow: hidden;
-}
-
-figcaption-one, figcaption-two {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--text-color);
-  text-align: center;
-  opacity: 0;  /* Hidden by default */
-  transition: opacity 0.3s ease;
-  /*padding: 0.5em;*/
-  max-width: 100%;
-  word-wrap: break-word;
-  white-space: normal;
-}
-
-img.profile-pic {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  width: 150px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(62, 59, 64, 0.1);
-  object-fit: cover;
-  display: block;
-  overflow: hidden;
-  transition: filter 0.3s ease;
-}
-
-img.figure-small {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(62, 59, 64, 0.1);
-  object-fit: cover;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  transition: filter 0.3s ease;
-}
-
-/*
-section {
-  margin-bottom: 3.5rem;
-}
-*/
-
-h2 {
-  font-family: 'Crimson Text', serif;
-  font-weight: 500;
-  font-size: 2.1rem;
-  /*margin-bottom: 0.8rem;*/
-  color: var(--primary-color);
-  border-bottom: 3px solid var(--accent-color);
-  /*padding-bottom: 0.2rem;*/
-  max-width: max-content;
-  line-height: 1.1;
-}
-
-ul, ol {
-  list-style-type: disc;
-  padding-left: 1.4rem;
-  color: var(--text-color);
-  font-weight: 500;
-  font-size: 1.0rem;
-}
-
-li {
-  margin-bottom: 0.7rem;
+  font-size: 1.02rem;
+  line-height: 1.75;
 }
 
 a {
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   border-bottom: 1.8px solid transparent;
   transition: border-color 0.3s ease;
-}
-
-.quick-links a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 600;
-  border-bottom: 1.8px solid var(--accent-color);
 }
 
 a:hover {
   border-color: var(--accent-color);
 }
 
-p {
-  font-weight: 500;
-  font-size: 1.0rem;
-  margin-top: 0;
+/* =========================
+   Navbar
+========================= */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-color);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
 }
 
-footer {
-  display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
-  height: 80px;            
-  text-align: center;
-  font-size: 1.0rem;
-}
-
-figure img:hover {
-  filter: opacity(0.3);
-}
-
-figure img.profile-pic:hover + figcaption-one {
-  opacity: 1;
-}
-
-figure img:hover + figcaption-two {
-  opacity: 1;
-}
-
-#theme-switch{
-  height: 50px;
-  width: 50px;
-  padding: 0;
-  border-radius: 50%;
-  background-color: var(--bg-color);
+nav .nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  border:none;
+  position: relative;
 }
 
-#theme-switch svg{
-  fill: var(--primary-color)
+nav ul.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 48px;
+  padding: 0;
+  margin: 0;
 }
 
-#theme-switch svg:last-child{
+nav a {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+nav a:hover {
+  border-color: var(--accent-color);
+}
+
+.nav-right {
+  position: absolute;
+  right: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   Theme Switch
+========================= */
+
+#theme-switch {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: none;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#theme-switch svg {
+  fill: var(--primary-color);
+}
+
+#theme-switch svg:last-child {
   display: none;
 }
 
-.darkmode #theme-switch svg:first-child{
+.darkmode #theme-switch svg:first-child {
   display: none;
 }
 
-.darkmode #theme-switch svg:last-child{
+.darkmode #theme-switch svg:last-child {
   display: block;
+}
+
+/* =========================
+   Main Content Frame
+========================= */
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 24px 5rem;
+}
+
+/* =========================
+   Header / Hero Section
+========================= */
+
+header {
+  text-align: center;
+  margin-bottom: 4.5rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 3rem;
+  letter-spacing: 0.015em;
+  margin: 0 0 0.6rem 0;
+  color: var(--primary-color);
+}
+
+.icon-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  font-size: 1rem;
+  color: #888;
+}
+
+.icon-label ion-icon {
+  font-size: 1.1em;
+}
+
+/* =========================
+   Section Rhythm
+========================= */
+
+section {
+  margin-bottom: 4.5rem;
+}
+
+/* =========================
+   Headings
+========================= */
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   Text
+========================= */
+
+p {
+  margin-bottom: 1.4rem;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+ul,
+ol {
+  padding-left: 1.4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+/* =========================
+   Figures & Images
+========================= */
+
+/* =========================
+   Figures
+========================= */
+
+figure.profile-pic-figure {
+  display: inline-block;   /* shrink to image + caption */
+  float: right;            /* move it to right of text */
+  margin: 0 0 3rem 5rem;   /* spacing from body text */
+  text-align: center;      /* caption under image */
+}
+
+/* Profile image inside figure */
+figure.profile-pic-figure img {
+  width: 180px;
+  border-radius: 14px;
+  object-fit: cover;
+  display: block;          /* ensures caption below */
+  margin-bottom: 0.5rem;  /* spacing from caption */
+}
+
+/* Caption under profile image */
+figure.profile-pic-figure figcaption {
+  font-size: 0.85rem;
+  color: #777;
+  display: block;
+  margin: 0;
+}
+
+/* Medium images (centered, not floated) */
+figure img.figure-small {
+  width: 420px;
+  display: block;
+  margin: 0rem auto;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+figure img.figure-small + figcaption {
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+  margin-top: 0.6rem;
+  display: block;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  clear: both;       
+  margin-top: 5rem;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
 }
