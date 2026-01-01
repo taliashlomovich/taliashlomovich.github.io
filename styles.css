@@ -12,15 +12,15 @@ html {
 }
 
 :root {
-  --bg-color: #fbf7f5;
-  --primary-color: #6b5bd6;
+  --bg-color: #f8f7f5;
+  --primary-color: #812EFF;
   --accent-color: #f2abc2;
-  --text-color: #2f2d32;
+  --text-color: #3e3b40;
 }
 
 .darkmode {
   --bg-color: #181a1b;
-  --primary-color: #9a8cff;
+  --primary-color: #6739E5;
   --accent-color: #d292a6;
   --text-color: #c6c1bb;
 }
@@ -59,7 +59,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(to bottom, #f9f5f8, #f7f0f5);
+  background: #eee5f1;
   backdrop-filter: blur(6px);
   z-index: 1000;
 }
@@ -113,7 +113,7 @@ nav a:hover {
   height: 42px;
   border-radius: 50%;
   background: none;
-  border: 1px solid #fff;
+  border: 1px solid #eee5f1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -236,7 +236,7 @@ figure.profile-pic-figure {
 /* Profile image inside figure */
 figure.profile-pic-figure img {
   width: 180px;
-  border-radius: 14px;
+  border-radius: 4px;
   object-fit: cover;
   display: block;          /* ensures caption below */
   margin-bottom: 0.5rem;  /* spacing from caption */
@@ -255,7 +255,7 @@ figure img.figure-small {
   width: 420px;
   display: block;
   margin: 0rem auto;
-  border-radius: 14px;
+  border-radius: 4px;
   object-fit: cover;
 }
 
