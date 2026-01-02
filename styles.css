@@ -1,10 +1,8 @@
-/* =========================
-   Fonts
-========================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap');
 
 /* =========================
-   Base + Theme Variables
+   Base Variables
 ========================= */
 
 html {
@@ -13,20 +11,22 @@ html {
 
 :root {
   --bg-color: #f8f7f5;
-  --primary-color: #8a0653;
+  --primary-color: #0163b4;
   --accent-color: #f2abc2;
   --text-color: #3e3b40;
+  --nav-color: #f8f7f5;
 }
 
 .darkmode {
   --bg-color: #181a1b;
-  --primary-color: #8a0653;
+  --primary-color: #5b7e9c;
   --accent-color: #d292a6;
   --text-color: #c6c1bb;
+  --nav-color: #181a1b;
 }
 
 /* =========================
-   Body + Global Typography
+   Body + Links
 ========================= */
 
 body {
@@ -59,7 +59,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: #eee5f1;
+  background-color: var(--nav-color);
   backdrop-filter: blur(6px);
   z-index: 1000;
 }
@@ -105,7 +105,7 @@ nav a:hover {
 }
 
 /* =========================
-   Theme Switch
+   Theme Switch Button
 ========================= */
 
 #theme-switch {
@@ -113,7 +113,7 @@ nav a:hover {
   height: 42px;
   border-radius: 50%;
   background: none;
-  border: 1px solid #eee5f1;
+  border: 1px solid var(--nav-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -177,7 +177,7 @@ h1 {
 }
 
 /* =========================
-   Section Rhythm
+   Section 
 ========================= */
 
 section {
@@ -252,7 +252,7 @@ figure.profile-pic-figure figcaption {
 
 /* Medium images (centered, not floated) */
 figure img.figure-small {
-  width: 420px;
+  width: 30%;
   display: block;
   margin: 0rem auto;
   border-radius: 4px;
@@ -277,4 +277,61 @@ footer {
   font-size: 0.9rem;
   color: #777;
   text-align: center;
+}
+
+/* =========================
+   Mobile Navbar
+========================= */
+
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  nav .nav-container {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav ul.nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-color);
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  nav ul.nav-links li {
+    padding: 16px 0;
+    text-align: center;
+  }
+
+  nav ul.nav-links.show {
+    display: flex;
+  }
+
+  /* Optional: stop profile image float on mobile */
+  figure.profile-pic-figure {
+    float: none;              /* remove float */
+    margin: 1.5rem auto;      /* center horizontally */
+    width: 180px;             /* keep size sane */
+    display: block;
+  }
+
+  figure.profile-pic-figure img {
+    margin: 0 auto;
+  }
 }
