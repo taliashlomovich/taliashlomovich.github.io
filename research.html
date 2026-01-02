@@ -23,6 +23,9 @@
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
            <nav>
             <div class="nav-container">
+                <button class="hamburger" aria-label="Menu" onclick="toggleNav()">
+                ☰
+                </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
@@ -51,4 +54,9 @@
                <li>Pre-print: <a href = "https://arxiv.org/abs/2410.21525">A Quantitative Guessing Geodesics Theorem</a> (Summer project supervised by <a href="https://hpetyt.github.io">Harry Petyt</a> and <a href="https://www.davidespriano.com/index.html">Davide Spriano</a>)</li>
            </ol>
         </div>
+        <script>
+        function toggleNav() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+        </script>
     </body>
