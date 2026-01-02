@@ -251,12 +251,24 @@ figure.profile-pic-figure figcaption {
 }
 
 /* Medium images (centered, not floated) */
-figure img.figure-small img {
-  width: 50%;
+figure.figure-small {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+figure.figure-small img {
+  width: 420px;      
   display: block;
-  margin: 0rem auto;
+  margin: 0 auto 0.5rem;
   border-radius: 4px;
   object-fit: cover;
+}
+
+figure.figure-small figcaption {
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+  margin-top: 0.6rem;
 }
 
 figure img.figure-small + figcaption {
@@ -336,9 +348,14 @@ footer {
   }
 
    figure.figure-small {
-    float: none;              /* remove float */
     margin: 1.5rem auto;      /* center horizontally */
     width: 180px;             /* keep size sane */
+    display: block;
+    text-align: center;
+  }
+
+   figure.figure-small img {
+    margin: 0 auto;
     display: block;
   }
 }
