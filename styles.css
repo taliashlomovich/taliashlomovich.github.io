@@ -251,7 +251,7 @@ figure.profile-pic-figure figcaption {
 }
 
 /* Medium images (centered, not floated) */
-figure img.figure-small {
+figure img.figure-small img {
   width: 50%;
   display: block;
   margin: 0rem auto;
