@@ -339,7 +339,7 @@ footer {
   figure.profile-pic-figure {
     float: none;              /* remove float */
     margin: 1.5rem auto;      /* center horizontally */
-    width: 180px;             /* keep size sane */
+    width: 65%;             /* keep size sane */
     display: block;
   }
 
@@ -349,7 +349,7 @@ footer {
 
    figure.figure-small {
     margin: 1.5rem auto;      /* center horizontally */
-    width: 180px;             /* keep size sane */
+    width: 65%;             /* keep size sane */
     display: block;
     text-align: center;
   }
@@ -357,5 +357,6 @@ footer {
    figure.figure-small img {
     margin: 0 auto;
     display: block;
+    width: 100%;
   }
 }
