@@ -252,7 +252,7 @@ figure.profile-pic-figure figcaption {
 
 /* Medium images (centered, not floated) */
 figure img.figure-small {
-  width: 30%;
+  width: 50%;
   display: block;
   margin: 0rem auto;
   border-radius: 4px;
@@ -333,5 +333,12 @@ footer {
 
   figure.profile-pic-figure img {
     margin: 0 auto;
+  }
+
+   figure.figure-small {
+    float: none;              /* remove float */
+    margin: 1.5rem auto;      /* center horizontally */
+    width: 180px;             /* keep size sane */
+    display: block;
   }
 }
