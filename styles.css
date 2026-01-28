@@ -10,17 +10,17 @@ html {
 }
 
 :root {
-  --bg-color: #f8f7f5;
+  --bg-color: #e7e5e0a5;
   --primary-color: #0163b4;
-  --accent-color: #f2abc2;
+  --accent-color: #e393d2;
   --text-color: #3e3b40;
   --nav-color: #f8f7f5;
   --links-color: #5c7b51;
 }
 
 .darkmode {
-  --bg-color: #181a1b;
-  --primary-color: #0163b4;
+  --bg-color: #202224;
+  --primary-color: #40729a;
   --accent-color: #d292a6;
   --text-color: #c6c1bb;
   --nav-color: #181a1b;
