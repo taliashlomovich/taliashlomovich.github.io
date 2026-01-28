@@ -15,14 +15,16 @@ html {
   --accent-color: #f2abc2;
   --text-color: #3e3b40;
   --nav-color: #f8f7f5;
+  --links-color: #5c7b51;
 }
 
 .darkmode {
   --bg-color: #181a1b;
-  --primary-color: #5b7e9c;
+  --primary-color: #0163b4;
   --accent-color: #d292a6;
   --text-color: #c6c1bb;
   --nav-color: #181a1b;
+  --links-color: #5c7b51;
 }
 
 /* =========================
