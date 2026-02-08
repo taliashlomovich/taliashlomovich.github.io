@@ -1,1 +1,1 @@
-Here is the code for my academic website, which I wrote primarily using HTML and CSS. It also includes a short Javascipt snippet for a button that changes between light and dark mode. Please request permission if you would like to use it!
+Here is the code for my academic website, which I wrote primarily using HTML and CSS. It also includes a short Javascript snippet for a button that changes between light and dark mode. Please request permission if you would like to use it!
