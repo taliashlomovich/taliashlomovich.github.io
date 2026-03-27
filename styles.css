@@ -1,364 +1,341 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Source+Sans+3:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Source+Sans+3:wght@400;500;600&display=swap');
 
 /* =========================
-   Base Variables
+VARIABLES
 ========================= */
 
-html {
-  scroll-behavior: smooth;
-}
-
 :root {
-  --bg-color: #f8f7f599;
-  --primary-color: #0163b4;
-  --accent-color: #e393d2;
-  --text-color: #3e3b40;
-  --nav-color: #f8f7f5;
-  --links-color: #5c7b51;
+--bg: #ffffff;
+--text: #2b2b2b;
+
+--primary: #2a6f97;
+--secondary: #3a7ca5;
+
+--muted: #6f6f6f;
+--border: #e6e6e6;
+--nav-bg: rgba(255,255,255,0.95);
 }
 
 .darkmode {
-  --bg-color: #202224;
-  --primary-color: #40729a;
-  --accent-color: #d292a6;
-  --text-color: #c6c1bb;
-  --nav-color: #181a1b;
-  --links-color: #5c7b51;
+--bg: #1f1f1f;
+--text: #e3e3e3;
+
+--primary: #6ea8dc;
+--secondary: #8fbce6;
+
+--muted: #a0a0a0;
+--border: #333;
+--nav-bg: rgba(31,31,31,0.95);
 }
 
 /* =========================
-   Body + Links
+BASE
 ========================= */
 
 body {
-  margin: 0;
-  background-color: var(--bg-color);
-  font-family: 'Source Sans 3', sans-serif;
-  color: var(--text-color);
-  font-size: 1.02rem;
-  line-height: 1.75;
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 500;
-  border-bottom: 1.8px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-a:hover {
-  border-color: var(--accent-color);
+margin: 0;
+background: var(--bg);
+color: var(--text);
+font-family: 'Source Sans 3', sans-serif;
+font-size: 17px;
+line-height: 1.65;
+-webkit-font-smoothing: antialiased;
 }
 
 /* =========================
-   Navbar
+NAVBAR
 ========================= */
 
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--nav-color);
-  backdrop-filter: blur(6px);
-  z-index: 1000;
+position: fixed;
+top: 0;
+width: 100%;
+background: var(--nav-bg);
+border-bottom: 1px solid var(--border);
+z-index: 1000;
 }
 
-nav .nav-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 18px 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.nav-container {
+max-width: 900px;
+margin: 0 auto;
+padding: 14px 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
 
-nav ul.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 48px;
-  padding: 0;
-  margin: 0;
+.nav-links {
+display: flex;
+gap: 22px;
+list-style: none;
+margin: 0;
+padding: 0;
 }
 
-nav a {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
+.nav-links a {
+font-size: 0.8rem;
+text-transform: uppercase;
+letter-spacing: 0.05em;
+font-weight: 600;
+color: var(--muted);
+text-decoration: none;
+padding-bottom: 2px;
 }
 
-nav a:hover {
-  border-color: var(--accent-color);
-}
-
-.nav-right {
-  position: absolute;
-  right: 24px;
-  display: flex;
-  align-items: center;
+.nav-links a:hover {
+color: var(--primary);
+border-bottom: 1px solid var(--primary);
+text-decoration: none; /* fixes double underline */
 }
 
 /* =========================
-   Theme Switch Button
+THEME BUTTON
 ========================= */
 
+.nav-right {
+display: flex;
+align-items: center;
+}
+
 #theme-switch {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: none;
-  border: 1px solid var(--nav-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+width: 34px;
+height: 34px;
+border-radius: 50%;
+border: none;
+outline: none;
+background: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+
+#theme-switch:hover {
+background: rgba(0,0,0,0.05);
+}
+
+.darkmode #theme-switch:hover {
+background: rgba(255,255,255,0.08);
 }
 
 #theme-switch svg {
-  fill: var(--primary-color);
+width: 18px;
+height: 18px;
+fill: var(--muted);
 }
 
 #theme-switch svg:last-child {
-  display: none;
+display: none;
 }
 
 .darkmode #theme-switch svg:first-child {
-  display: none;
+display: none;
 }
 
 .darkmode #theme-switch svg:last-child {
-  display: block;
+display: block;
 }
 
 /* =========================
-   Main Content Frame
+CONTENT
 ========================= */
 
 .content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 100px 24px 5rem;
+max-width: 760px;
+margin: 0 auto;
+padding: 90px 20px 3rem;
 }
 
 /* =========================
-   Header / Hero Section
+HEADER
 ========================= */
 
 header {
-  text-align: center;
-  margin-bottom: 4.5rem;
+margin-bottom: 1.4rem;
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  font-size: 3rem;
-  letter-spacing: 0.015em;
-  margin: 0 0 0.6rem 0;
-  color: var(--primary-color);
+font-family: 'Inter', sans-serif;
+font-size: 2.25rem;
+font-weight: 600;
+letter-spacing: -0.01em;
+margin-bottom: 0.2rem;
+color: var(--primary);
 }
 
 .icon-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6em;
-  font-size: 1rem;
-  color: #888;
+display: inline-flex;
+align-items: center;
+gap: 0.4em;
+font-size: 0.95rem;
+color: var(--muted);
 }
 
 .icon-label ion-icon {
-  font-size: 1.1em;
+color: var(--primary);
 }
 
 /* =========================
-   Section 
+INTRO LAYOUT
 ========================= */
 
-section {
-  margin-bottom: 4.5rem;
+.intro {
+overflow: hidden;
+}
+
+figure.profile-pic-figure {
+float: right;
+width: 180px;
+margin: 0 0 1rem 2rem;
+display: flex;
+flex-direction: column;
+}
+
+figure.profile-pic-figure img {
+width: 100%;
+border-radius: 4px;
+}
+
+figure.profile-pic-figure figcaption {
+font-size: 0.75rem;
+color: var(--muted);
+margin-top: 0.4rem;
+}
+
+figure.figure-small {
+   margin: 2rem auto;
+   text-align: center;
+   } 
+   
+figure.figure-small img { 
+  width: 420px; 
+  display: block; 
+  margin: 0 auto 0.5rem; 
+  border-radius: 4px; 
+  object-fit: cover; 
+} 
+
+figure.figure-small figcaption { 
+  font-size: 0.85rem; 
+  color: #777; 
+  text-align: center; 
+  margin-top: 0.6rem; 
+}
+
+/* CONTACT */
+.contact-box {
+width: 100%;
+margin-top: 0.6rem;
+font-size: 0.85rem;
+color: var(--muted);
+text-align: left;
+line-height: 1.3;
+}
+
+.contact-box p {
+margin: 0.15rem 0;
+}
+
+.contact-box strong {
+display: block;
+margin-bottom: 0.2rem;
+color: var(--text);
+}
+
+/* TEXT COLUMN */
+.intro p {
+max-width: 560px;
+margin-bottom: 1rem;
 }
 
 /* =========================
-   Headings
+HEADINGS
 ========================= */
 
 h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
+font-family: 'Inter', sans-serif;
+font-size: 1.4rem;
+font-weight: 600;
+margin-top: 1.6rem;
+margin-bottom: 0.4rem;
 }
 
 /* =========================
-   Text
+TEXT
 ========================= */
 
 p {
-  margin-bottom: 1.4rem;
-  font-weight: 400;
-  text-rendering: optimizeLegibility;
+margin-bottom: 1rem;
 }
 
-ul,
-ol {
-  padding-left: 1.4rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
+a {
+color: var(--primary);
+text-decoration: none;
 }
 
-li {
-  margin-bottom: 0.6rem;
+a:hover {
+text-decoration: underline;
 }
 
 /* =========================
-   Figures & Images
-========================= */
-
-/* =========================
-   Figures
-========================= */
-
-figure.profile-pic-figure {
-  display: inline-block;   /* shrink to image + caption */
-  float: right;            /* move it to right of text */
-  margin: 0 0 3rem 5rem;   /* spacing from body text */
-  text-align: center;      /* caption under image */
-}
-
-/* Profile image inside figure */
-figure.profile-pic-figure img {
-  width: 180px;
-  border-radius: 4px;
-  object-fit: cover;
-  display: block;          /* ensures caption below */
-  margin-bottom: 0.5rem;  /* spacing from caption */
-}
-
-/* Caption under profile image */
-figure.profile-pic-figure figcaption {
-  font-size: 0.85rem;
-  color: #777;
-  display: block;
-  margin: 0;
-}
-
-/* Medium images (centered, not floated) */
-figure.figure-small {
-  margin: 2rem auto;
-  text-align: center;
-}
-
-figure.figure-small img {
-  width: 420px;      
-  display: block;
-  margin: 0 auto 0.5rem;
-  border-radius: 4px;
-  object-fit: cover;
-}
-
-figure.figure-small figcaption {
-  font-size: 0.85rem;
-  color: #777;
-  text-align: center;
-  margin-top: 0.6rem;
-}
-
-figure img.figure-small + figcaption {
-  font-size: 0.85rem;
-  color: #777;
-  text-align: center;
-  margin-top: 0.6rem;
-  display: block;
-}
-
-/* =========================
-   Footer
+FOOTER
 ========================= */
 
 footer {
-  clear: both;       
-  margin-top: 5rem;
-  font-size: 0.9rem;
-  color: #777;
-  text-align: center;
+margin-top: 2rem;
+font-size: 0.85rem;
+text-align: center;
+color: var(--muted);
 }
 
 /* =========================
-   Mobile Navbar
+MOBILE
 ========================= */
 
 .hamburger {
-  display: none;
-  font-size: 1.6rem;
-  background: none;
-  border: none;
-  color: var(--primary-color);
-  cursor: pointer;
+display: none;
+font-size: 1.4rem;
+background: none;
+border: none;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
 
-  nav .nav-container {
-    justify-content: space-between;
-  }
+.nav-container {
+justify-content: space-between;
+}
 
-  .hamburger {
-    display: block;
-  }
+.hamburger {
+display: block;
+}
 
-  nav ul.nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--bg-color);
-    flex-direction: column;
-    gap: 0;
-    display: none;
-  }
+.nav-links {
+position: absolute;
+top: 100%;
+left: 12px;
+right: 12px;
+flex-direction: column;
+display: none;
+background: var(--bg);
+border: 1px solid var(--border);
+border-radius: 8px;
+}
 
-  nav ul.nav-links li {
-    padding: 16px 0;
-    text-align: center;
-  }
+.nav-links.show {
+display: flex;
+}
 
-  nav ul.nav-links.show {
-    display: flex;
-  }
+.nav-links li {
+padding: 10px 0;
+text-align: center;
+}
 
-  /* Optional: stop profile image float on mobile */
-  figure.profile-pic-figure {
-    float: none;              /* remove float */
-    margin: 1.5rem auto;      /* center horizontally */
-    width: 65%;             /* keep size sane */
-    display: block;
-  }
+figure.profile-pic-figure {
+float: none;
+margin: 1.2rem auto;
+}
 
-  figure.profile-pic-figure img {
-    margin: 0 auto;
-  }
-
-   figure.figure-small {
-    margin: 1.5rem auto;      /* center horizontally */
-    width: 65%;             /* keep size sane */
-    display: block;
-    text-align: center;
-  }
-
-   figure.figure-small img {
-    margin: 0 auto;
-    display: block;
-    width: 100%;
-  }
+.intro p {
+max-width: 100%;
+}
 }
