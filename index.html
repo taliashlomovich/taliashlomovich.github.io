@@ -48,18 +48,35 @@
         </header>
         
         <main>
-            <div class = "intro">
+            
                 <figure class="profile-pic-figure">
                 <img src="Talia.jpeg" alt="Talia Shlomovich"/>
                 <figcaption>Whilst graduating from Warwick!</figcaption>
+            </figure> 
+            
+            <div class="contact-box">
+            <p><strong>Contact</strong></p>
+            <p>
+                <ion-icon name="mail-outline"></ion-icon>
+                &nbsp;ls3007 "at" hw.ac.uk
+            </p>
 
-                <div class="contact-box">
-                <p><strong>Contact</strong></p>
-                <p><a href="mailto:ls3007@hw.ac.uk">ls3007 "at" hw.ac.uk</a></p>
-                </div>
-                </figure>
-                
-    
+            <p>
+                <a href="https://linkedin.com/in/talshlo" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                    LinkedIn
+                </a>
+            </p>
+
+            <p>
+                <a href="https://github.com/taliashlomovich" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                    GitHub
+                </a>
+            </p>
+            </div>
+            
+            <div class = "intro">
             <p>I am a second year PhD student at Heriot-Watt University, working in geometric group theory, under the supervision of <a href="https://www.mcordes.com/">Matthew Cordes</a>.</p>
                 
             <p>
@@ -78,8 +95,8 @@
             </p>
             </div>
         </main>
-
-        <footer>
+        </div>
+        <footer class = "footer">
               <p id="last-modified"></p>
                   <script>
                     // Get the last modified date of the document
@@ -93,7 +110,6 @@
                     document.getElementById("last-modified").textContent = `Last updated: ${formattedDate}`;
                   </script>
         </footer>
-        </div>
         <script>
         function toggleNav() {
             document.querySelector('.nav-links').classList.toggle('show');

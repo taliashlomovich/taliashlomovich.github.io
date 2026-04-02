@@ -31,6 +31,9 @@ VARIABLES
 /* =========================
 BASE
 ========================= */
+html {
+  height: 100%
+}
 
 body {
 margin: 0;
@@ -40,6 +43,9 @@ font-family: 'Source Sans 3', sans-serif;
 font-size: 17px;
 line-height: 1.65;
 -webkit-font-smoothing: antialiased;
+height: 100%;
+display: flex;
+flex-direction: column;
 }
 
 /* =========================
@@ -85,7 +91,7 @@ padding-bottom: 2px;
 .nav-links a:hover {
 color: var(--primary);
 border-bottom: 1px solid var(--primary);
-text-decoration: none; /* fixes double underline */
+text-decoration: none;
 }
 
 /* =========================
@@ -141,9 +147,17 @@ CONTENT
 ========================= */
 
 .content {
-max-width: 760px;
+max-width: 900px;
+width: min(90%, 1100px);
 margin: 0 auto;
 padding: 90px 20px 3rem;
+flex: 1;
+}
+
+@media (min-width: 1600px) {
+body {
+font-size: 18px;
+}
 }
 
 /* =========================
@@ -179,27 +193,62 @@ color: var(--primary);
 INTRO LAYOUT
 ========================= */
 
+/* Image on the right */
+.profile-pic-figure {
+    float: right;
+    width: 180px;
+    margin: 0 0 1rem 1.5rem;
+}
+
+.profile-pic-figure img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.profile-pic-figure figcaption {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+}
+
+/* Contact box sits under the image */
+.contact-box {
+    float: right;
+    width: 180px;
+    margin: 0 0 1.5rem 1.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    clear: right;
+}
+
+.contact-box strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--text);
+}
+
+.contact-box a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.25rem;
+}
+
+.contact-box ion-icon {
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+
+/* Text stays nicely on the left */
 .intro {
-overflow: hidden;
+    max-width: 650px;
 }
 
-figure.profile-pic-figure {
-float: right;
-width: 180px;
-margin: 0 0 1rem 2rem;
-display: flex;
-flex-direction: column;
-}
-
-figure.profile-pic-figure img {
-width: 100%;
-border-radius: 4px;
-}
-
-figure.profile-pic-figure figcaption {
-font-size: 0.75rem;
-color: var(--muted);
-margin-top: 0.4rem;
+/* Clear floats after content */
+.intro::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 figure.figure-small {
@@ -220,32 +269,6 @@ figure.figure-small figcaption {
   color: #777; 
   text-align: center; 
   margin-top: 0.6rem; 
-}
-
-/* CONTACT */
-.contact-box {
-width: 100%;
-margin-top: 0.6rem;
-font-size: 0.85rem;
-color: var(--muted);
-text-align: left;
-line-height: 1.3;
-}
-
-.contact-box p {
-margin: 0.15rem 0;
-}
-
-.contact-box strong {
-display: block;
-margin-bottom: 0.2rem;
-color: var(--text);
-}
-
-/* TEXT COLUMN */
-.intro p {
-max-width: 560px;
-margin-bottom: 1rem;
 }
 
 /* =========================
@@ -281,11 +304,13 @@ text-decoration: underline;
 FOOTER
 ========================= */
 
-footer {
-margin-top: 2rem;
-font-size: 0.85rem;
-text-align: center;
-color: var(--muted);
+.footer {
+    margin: 0;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+    background: #2a6f97;
 }
 
 /* =========================
@@ -330,12 +355,4 @@ padding: 10px 0;
 text-align: center;
 }
 
-figure.profile-pic-figure {
-float: none;
-margin: 1.2rem auto;
-}
-
-.intro p {
-max-width: 100%;
-}
 }
