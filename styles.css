@@ -1,358 +1,790 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Source+Sans+3:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
 
-/* =========================
+/* =========================================================
 VARIABLES
-========================= */
+========================================================= */
 
 :root {
---bg: #ffffff;
---text: #2b2b2b;
 
---primary: #2a6f97;
---secondary: #3a7ca5;
+  /* Core palette */
+  --bg: #fbfaf7;
+  --bg-soft: rgba(255,255,255,0.68);
 
---muted: #6f6f6f;
---border: #e6e6e6;
---nav-bg: rgba(255,255,255,0.95);
+  --text: #2c2c2c;
+  --muted: #6d6963;
+
+  /* Intellectual blue-greens */
+  --primary: #315f72;
+  --secondary: #587d8d;
+
+  /* Human warmth */
+  --accent: #8f625d;
+  --accent-soft: #b78c86;
+
+  --border: #e6dfd5;
+
+  --nav-bg: rgba(251,250,247,0.78);
+
+  --shadow-soft:
+    0 1px 2px rgba(0,0,0,0.03),
+    0 12px 32px rgba(0,0,0,0.06);
+
+  --shadow-light:
+    0 2px 10px rgba(0,0,0,0.04);
+
+  --content-width: 860px;
 }
 
 .darkmode {
---bg: #1f1f1f;
---text: #e3e3e3;
 
---primary: #6ea8dc;
---secondary: #8fbce6;
+  --bg: #1b1d21;
+  --bg-soft: rgba(255,255,255,0.035);
 
---muted: #a0a0a0;
---border: #333;
---nav-bg: rgba(31,31,31,0.95);
+  --text: #e7e5e1;
+  --muted: #aba59d;
+
+  --primary: #8fb8c7;
+  --secondary: #abc8d4;
+
+  --accent: #d3a099;
+  --accent-soft: #e4bbb4;
+
+  --border: #34373d;
+
+  --nav-bg: rgba(27,29,33,0.76);
+
+  --shadow-soft:
+    0 1px 2px rgba(0,0,0,0.2),
+    0 16px 36px rgba(0,0,0,0.32);
+
+  --shadow-light:
+    0 2px 10px rgba(0,0,0,0.22);
 }
 
-/* =========================
+/* =========================================================
 BASE
-========================= */
+========================================================= */
+
 html {
-  height: 100%
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    opacity 0.18s ease,
+    transform 0.18s ease;
 }
 
 body {
-margin: 0;
-background: var(--bg);
-color: var(--text);
-font-family: 'Source Sans 3', sans-serif;
-font-size: 17px;
-line-height: 1.65;
--webkit-font-smoothing: antialiased;
-height: 100%;
-display: flex;
-flex-direction: column;
+
+  margin: 0;
+
+  background: var(--bg);
+  color: var(--text);
+
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 17px;
+  line-height: 1.74;
+
+  -webkit-font-smoothing: antialiased;
+
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
 }
 
-/* =========================
-NAVBAR
-========================= */
+/* =========================================================
+MATHEMATICAL ATMOSPHERIC TEXTURE
+========================================================= */
+
+body::before {
+
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.045;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23315f72' stroke-width='0.8'%3E%3Cpath d='M0 120 Q60 20 120 120 T240 120'/%3E%3Cpath d='M0 180 Q60 80 120 180 T240 180'/%3E%3Ccircle cx='120' cy='120' r='2' fill='%23315f72' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+
+  background-size: 340px 340px;
+
+  z-index: -1;
+}
+
+.darkmode body::before {
+  opacity: 0.06;
+  filter: brightness(1.3);
+}
+
+/* =========================================================
+NAVIGATION
+========================================================= */
 
 nav {
-position: fixed;
-top: 0;
-width: 100%;
-background: var(--nav-bg);
-border-bottom: 1px solid var(--border);
-z-index: 1000;
+
+  position: fixed;
+  top: 0;
+
+  width: 100%;
+
+  background: var(--nav-bg);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+
+  z-index: 1000;
+}
+
+.darkmode nav {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* subtle signature line */
+
+nav::after {
+
+  content: "";
+
+  position: absolute;
+
+  bottom: -1px;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(49,95,114,0.22),
+      rgba(143,98,93,0.18),
+      transparent
+    );
 }
 
 .nav-container {
-max-width: 900px;
-margin: 0 auto;
-padding: 14px 20px;
-display: flex;
-align-items: center;
-justify-content: space-between;
+
+  max-width: var(--content-width);
+
+  margin: 0 auto;
+  padding: 16px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-links {
-display: flex;
-gap: 30px;
-list-style: none;
-margin: 0;
-padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 34px;
+
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-font-size: 0.8rem;
-text-transform: uppercase;
-letter-spacing: 0.05em;
-font-weight: 600;
-color: var(--muted);
-text-decoration: none;
-padding-bottom: 2px;
+
+  position: relative;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--muted);
+
+  text-decoration: none;
+
+  padding-bottom: 5px;
+}
+
+.nav-links a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1.5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--primary),
+      var(--accent)
+    );
+
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .nav-links a:hover {
-color: var(--primary);
-border-bottom: 1px solid var(--primary);
-text-decoration: none;
+  color: var(--text);
 }
 
-/* =========================
-THEME BUTTON
-========================= */
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* =========================================================
+THEME SWITCH
+========================================================= */
 
 .nav-right {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 #theme-switch {
-width: 34px;
-height: 34px;
-border-radius: 50%;
-border: none;
-outline: none;
-background: transparent;
-display: flex;
-align-items: center;
-justify-content: center;
-cursor: pointer;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
 }
 
 #theme-switch:hover {
-background: rgba(0,0,0,0.05);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(49,95,114,0.08),
+      rgba(143,98,93,0.08)
+    );
 }
 
 .darkmode #theme-switch:hover {
-background: rgba(255,255,255,0.08);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(143,184,199,0.08),
+      rgba(211,160,153,0.08)
+    );
 }
 
 #theme-switch svg {
-width: 18px;
-height: 18px;
-fill: var(--muted);
+
+  width: 18px;
+  height: 18px;
+
+  fill: var(--muted);
 }
 
 #theme-switch svg:last-child {
-display: none;
+  display: none;
 }
 
 .darkmode #theme-switch svg:first-child {
-display: none;
+  display: none;
 }
 
 .darkmode #theme-switch svg:last-child {
-display: block;
+  display: block;
 }
 
-/* =========================
+/* =========================================================
 CONTENT
-========================= */
+========================================================= */
 
 .content {
-max-width: 900px;
-width: min(90%, 1100px);
-margin: 0 auto;
-padding: 90px 20px 3rem;
-flex: 1;
+
+  width: min(92%, var(--content-width));
+
+  margin: 0 auto;
+
+  padding:
+    115px
+    20px
+    4rem;
+
+  flex: 1;
 }
 
-@media (min-width: 1600px) {
-body {
-font-size: 18px;
-}
+section {
+  margin-bottom: 3.5rem;
 }
 
-/* =========================
+section:last-child {
+  margin-bottom: 1rem;
+}
+
+/* =========================================================
 HEADER
-========================= */
+========================================================= */
 
 header {
-margin-bottom: 1.4rem;
+  margin-bottom: 2rem;
 }
 
 h1 {
-font-family: 'Inter', sans-serif;
-font-size: 2.25rem;
-font-weight: 600;
-letter-spacing: -0.01em;
-margin-bottom: 0.2rem;
-color: var(--primary);
+
+  font-family: 'Inter', sans-serif;
+
+  font-size: clamp(2.5rem, 5vw, 3.2rem);
+  line-height: 1.04;
+
+  font-weight: 600;
+
+  letter-spacing: -0.035em;
+
+  margin-bottom: 0.45rem;
+
+  color: var(--primary);
 }
 
 .icon-label {
-display: inline-flex;
-align-items: center;
-gap: 0.4em;
-font-size: 0.95rem;
-color: var(--muted);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  font-size: 0.96rem;
+
+  color: var(--muted);
 }
 
 .icon-label ion-icon {
-color: var(--primary);
+  color: var(--accent);
 }
 
-/* =========================
-INTRO LAYOUT
-========================= */
+/* =========================================================
+INTRO
+========================================================= */
 
-/* Image on the right */
+.intro {
+  max-width: 62ch;
+}
+
+.intro::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* =========================================================
+PROFILE IMAGE
+========================================================= */
+
 .profile-pic-figure {
-    float: right;
-    width: 180px;
-    margin: 0 0 1rem 1.5rem;
+
+  float: right;
+
+  width: 200px;
+
+  margin:
+    0
+    0
+    1.5rem
+    2.3rem;
 }
 
 .profile-pic-figure img {
-    width: 100%;
-    border-radius: 4px;
+
+  width: 100%;
+  display: block;
+
+  border-radius: 2px;
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow-soft);
 }
 
 .profile-pic-figure figcaption {
-    font-size: 0.75rem;
-    color: var(--muted);
-    margin-top: 0.4rem;
+
+  margin-top: 0.7rem;
+
+  font-size: 0.76rem;
+  line-height: 1.45;
+
+  color: var(--muted);
+
+  text-align: center;
 }
 
-/* Contact box sits under the image */
+/* =========================================================
+CONTACT BOX
+========================================================= */
+
 .contact-box {
-    float: right;
-    width: 180px;
-    margin: 0 0 1.5rem 1.5rem;
-    font-size: 0.85rem;
-    color: var(--muted);
-    clear: right;
+
+  float: right;
+
+  width: 200px;
+
+  margin:
+    0.6rem
+    0
+    1.8rem
+    2.3rem;
+
+  padding:
+    1rem
+    1.15rem;
+
+  font-size: 0.88rem;
+  line-height: 1.58;
+
+  color: var(--muted);
+
+  border-left: 2px solid var(--accent);
+  border-radius: 0;
+
+  background:  rgba(143,98,93,0.06);
+
+  clear: right;
+}
+
+.darkmode .contact-box {
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(211,160,153,0.08),
+      transparent
+    );
 }
 
 .contact-box strong {
-    display: block;
-    margin-bottom: 0.4rem;
-    color: var(--text);
+
+  display: block;
+
+  margin-bottom: 0.75rem;
+
+  color: var(--text);
+
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 .contact-box a {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-bottom: 0.25rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-bottom: 0.5rem;
+
+  color: var(--muted);
+}
+
+.contact-box a:hover {
+  color: var(--accent);
 }
 
 .contact-box ion-icon {
-    font-size: 0.9rem;
-    color: var(--primary);
+
+  font-size: 0.95rem;
+
+  color: var(--accent);
 }
 
-/* Text stays nicely on the left */
-.intro {
-    max-width: 650px;
-}
-
-/* Clear floats after content */
-.intro::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
-figure.figure-small {
-   margin: 2rem auto;
-   text-align: center;
-   } 
-   
-figure.figure-small img { 
-  width: 420px; 
-  display: block; 
-  margin: 0 auto 0.5rem; 
-  border-radius: 4px; 
-  object-fit: cover; 
-} 
-
-figure.figure-small figcaption { 
-  font-size: 0.85rem; 
-  color: #777; 
-  text-align: center; 
-  margin-top: 0.6rem; 
-}
-
-/* =========================
+/* =========================================================
 HEADINGS
-========================= */
+========================================================= */
 
 h2 {
-font-family: 'Inter', sans-serif;
-font-size: 1.4rem;
-font-weight: 600;
-margin-top: 1.6rem;
-margin-bottom: 0.4rem;
+
+  position: relative;
+
+  font-family: 'Inter', sans-serif;
+
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  letter-spacing: -0.015em;
+
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+  padding-left: 0.9rem;
+
+  border-left: 3px solid var(--primary);
 }
 
-/* =========================
+/* subtle scholarly marker */
+
+h2::before {
+  position: absolute;
+
+  left: -1rem;
+  top: -0.03rem;
+
+  font-size: 0.9rem;
+
+  color: var(--accent-soft);
+
+  opacity: 0.8;
+}
+
+/* =========================================================
 TEXT
-========================= */
+========================================================= */
 
 p {
-margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+strong {
+  font-weight: 600;
 }
 
 a {
-color: var(--primary);
-text-decoration: none;
+
+  color: var(--primary);
+
+  text-decoration: none;
 }
 
 a:hover {
-text-decoration: underline;
+  color: var(--accent);
 }
 
-/* =========================
+p a {
+
+  border-bottom:
+    1px solid rgba(49,95,114,0.2);
+}
+
+p a:hover {
+
+  border-bottom-color:
+    rgba(143,98,93,0.5);
+}
+
+/* =========================================================
+FIGURES
+========================================================= */
+
+figure.figure-small {
+
+  margin:
+    2.7rem
+    auto;
+
+  text-align: center;
+}
+
+figure.figure-small img {
+
+  width: min(100%, 430px);
+
+  display: block;
+
+  margin:
+    0 auto
+    0.8rem;
+
+  border-radius: 14px;
+
+  border: 1px solid var(--border);
+
+  object-fit: cover;
+
+  box-shadow: var(--shadow-soft);
+}
+
+figure.figure-small figcaption {
+
+  font-size: 0.84rem;
+  line-height: 1.5;
+
+  color: var(--muted);
+}
+
+/* =========================================================
+LISTS
+========================================================= */
+
+ul,
+ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.45rem;
+}
+
+/* =========================================================
+SELECTION
+========================================================= */
+
+::selection {
+  background: rgba(49,95,114,0.16);
+}
+
+.darkmode ::selection {
+  background: rgba(143,184,199,0.24);
+}
+
+/* =========================================================
 FOOTER
-========================= */
+========================================================= */
 
 .footer {
-    margin: 0;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #fff;
-    background: #8a7ca9;
+
+  margin-top: 4rem;
+
+  padding:
+    2rem
+    1rem;
+
+  text-align: center;
+
+  font-size: 0.9rem;
+
+  color: rgba(255,255,255,0.88);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      #3f7084
+    );
 }
 
-/* =========================
-MOBILE
-========================= */
+/* =========================================================
+MOBILE NAV
+========================================================= */
 
 .hamburger {
-display: none;
-font-size: 1.4rem;
-background: none;
-border: none;
+
+  display: none;
+
+  background: none;
+  border: none;
+
+  color: var(--text);
+
+  font-size: 1.4rem;
+
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
 
-.nav-container {
-justify-content: space-between;
+  body {
+    font-size: 16.5px;
+  }
+
+  .nav-container {
+    justify-content: space-between;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 12px;
+    right: 12px;
+
+    flex-direction: column;
+
+    display: none;
+
+    padding:
+      0.6rem
+      0;
+
+    background: var(--bg);
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    box-shadow: var(--shadow-soft);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding: 0.5rem 0;
+  }
+
+  .profile-pic-figure,
+  .contact-box {
+
+    float: none;
+
+    width: min(100%, 240px);
+
+    margin:
+      0 auto
+      1.6rem
+      auto;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .content {
+    padding-top: 100px;
+  }
+
+  h1 {
+    line-height: 1.1;
+  }
+
+  h2 {
+    margin-top: 2.6rem;
+  }
+
+  body::before {
+    opacity: 0.03;
+    background-size: 260px 260px;
+  }
 }
 
-.hamburger {
-display: block;
-}
+@media (min-width: 1600px) {
 
-.nav-links {
-position: absolute;
-top: 100%;
-left: 12px;
-right: 12px;
-flex-direction: column;
-display: none;
-background: var(--bg);
-border: 1px solid var(--border);
-border-radius: 8px;
-}
-
-.nav-links.show {
-display: flex;
-}
-
-.nav-links li {
-padding: 10px 0;
-text-align: center;
-}
-
+  body {
+    font-size: 18px;
+  }
 }
