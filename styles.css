@@ -1,34 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
 
 /* ========================================================= VARIABLES ========================================================= */
 :root {
   /* BACKGROUND */
-  --bg: #FAFBFC;
-  --bg-soft: rgba(255, 255, 255, 0.9);
+  --bg: #F5F3EE;
 
   /* TEXT */
-  --text: #101828;
-  --muted: #667085;
+  --text: #2C2820;
+  --muted: #6E6560;
 
   /* PRIMARY */
-  --primary: #244184;
+  --primary: #31654F;
+  --secondary: #91A99B;
 
   /* LINKS */
-  --link: #1E5AA8;
-  --link-hover: #2D7BD3;
+  --link: #31654F;
+  --link-hover: #445A51;
 
-  --link-underline: rgba(30, 90, 168, 0.25);
-  --link-underline-hover: rgba(45, 123, 211, 0.35);
+  --link-underline: rgba(90, 114, 104, 0.24);
+  --link-underline-hover: rgba(68, 90, 81, 0.36);
 
   /* ACCENT */
-  --accent: #0F766E;
-  --accent-soft: #E6F4F1;
+  --accent: #A7234F;
+  --accent-soft: #F2EAE8;
 
   /* BORDER */
-  --border: #E4E7EC;
-
-  /* NAV */
-  --nav-bg: #FAFBFC;
+  --border: #DDD8CF;
 
   /* SHADOWS */
   --shadow-soft: 0 1px 2px rgba(0,0,0,0.04), 0 14px 32px rgba(0,0,0,0.06);
@@ -37,31 +34,28 @@
   --content-width: 860px;
 }
 
-/* ========================================================= DARK MODE ========================================================= */
 .darkmode {
-  --bg: #0B1220;
-  --bg-soft: rgba(11, 18, 32, 0.9);
+  --bg: #141310;
 
-  --text: #E6EAF2;
-  --muted: #A6B0C3;
+  --text: #EDE8E0;
+  --muted: #B5AFA5;
 
-  --primary: #A7B8FF;
+  --primary: #9DBFB0;
+  --secondary: #91A99B;
 
-  --link: #7CB7FF;
-  --link-hover: #A6D1FF;
+  --link: #9DBFB0;
+  --link-hover: #BBCFC5;
 
-  --link-underline: rgba(124, 183, 255, 0.25);
-  --link-underline-hover: rgba(166, 209, 255, 0.35);
+  --link-underline: rgba(157, 191, 176, 0.25);
+  --link-underline-hover: rgba(187, 207, 197, 0.36);
 
-  --accent: #2DD4BF;
-  --accent-soft: #0F2A2A;
+  --accent: #C4A0AE;
+  --accent-soft: #2C2226;
 
-  --border: #1F2A44;
+  --border: #38332C;
 
-  --nav-bg: #0B1220;
-
-  --shadow-soft: 0 1px 2px rgba(0,0,0,0.45), 0 16px 36px rgba(0,0,0,0.55);
-  --shadow-light: 0 2px 10px rgba(0,0,0,0.35);
+  --shadow-soft: 0 1px 2px rgba(0,0,0,0.50), 0 16px 36px rgba(0,0,0,0.60);
+  --shadow-light: 0 2px 10px rgba(0,0,0,0.40);
 }
 
 /* LINK STYLING */
@@ -94,18 +88,20 @@ html {
   transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, opacity 0.18s ease, transform 0.18s ease;
 }
 
+
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: 'Source Sans 3', sans-serif;
   font-size: 17px;
-  line-height: 1.74;
+  line-height: 1.78;
   -webkit-font-smoothing: antialiased;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
+  zoom: 0.8;
 }
 
 /* ========================================================= MATHEMATICAL ATMOSPHERIC TEXTURE ========================================================= */
@@ -114,9 +110,16 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.045;
-  background-image: url("data:image/svg+xml,%3Csvg width='240' height='240' viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%231E5AA8' stroke-width='0.8'%3E%3Cpath d='M0 120 Q60 20 120 120 T240 120'/%3E%3Cpath d='M0 180 Q60 80 120 180 T240 180'/%3E%3Ccircle cx='120' cy='120' r='2' fill='%231E5AA8' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 340px 340px;
+  opacity: 0.035;
+
+  background-image:
+    radial-gradient(
+      rgba(0,0,0,0.08) 0.5px,
+      transparent 0.5px
+    );
+
+  background-size: 14px 14px;
+
   z-index: -1;
 }
 
@@ -130,10 +133,10 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--nav-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  background: var(--bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
   z-index: 1000;
 }
 
@@ -172,9 +175,9 @@ nav::after {
 .nav-links a {
   position: relative;
   font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-transform: none;
   color: var(--muted);
   text-decoration: none;
   padding-bottom: 5px;
@@ -219,20 +222,13 @@ nav::after {
 }
 
 #theme-switch:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(30,90,168,0.08),
-    rgba(15,118,110,0.08)
-  );
+  background: rgba(0,0,0,0.05);
 }
 
 .darkmode #theme-switch:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(124,183,255,0.10),
-    rgba(45,212,191,0.10)
-  );
+  background: rgba(255,255,255,0.08);
 }
+
 
 #theme-switch svg {
   width: 18px;
@@ -274,13 +270,13 @@ header {
 }
 
 h1 {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 3.2rem);
-  line-height: 1.04;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 4rem);
+  line-height: 0.98;
   font-weight: 600;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
   margin-bottom: 0.45rem;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .icon-label {
@@ -372,14 +368,14 @@ h1 {
 /* ========================================================= HEADINGS ========================================================= */
 h2 {
   position: relative;
-  font-family: 'Inter', sans-serif;
-  font-size: 1.3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
   font-weight: 600;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
   margin-top: 3rem;
   margin-bottom: 1rem;
   padding-left: 0.9rem;
-  border-left: 3px solid var(--primary);
+  border-left: 2px solid var(--accent);
 }
 
 h2::before {
@@ -463,8 +459,9 @@ li {
   padding: 2rem 1rem;
   text-align: center;
   font-size: 0.9rem;
-  color: rgba(255,255,255,0.88);
-  background: var(--primary);
+  color: var(--muted);
+  background: var(--bg);
+  border-top: 1px solid var(--border);
 }
 
 /* ========================================================= MOBILE NAV ========================================================= */
