@@ -370,13 +370,11 @@ h1 {
 h2 {
   position: relative;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.9rem;
+  font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
-  padding-left: 0.9rem;
-  border-left: 2px solid var(--accent);
 }
 
 h2::before {
