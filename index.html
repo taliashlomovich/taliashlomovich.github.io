@@ -35,7 +35,7 @@
                 <li><a href="research.html">Research</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
                 <li><a href="invitedtalks.html">Talks</a></li>
-                <li><a href="other.html">Other</a></li>
+                <li><a href="projects.html">Projects</a></li>
             </ul>
             <div class="nav-right">
             <button id = "theme-switch">
@@ -50,64 +50,49 @@
         <h1>Talia Shlomovich</h1>
         </header>
         
-        <main>
-            
-            <div class="contact-box">
-            <p><strong>Contact</strong></p>
-            <p>
-                <ion-icon name="mail-outline"></ion-icon>
-                &nbsp;ls3007 "at" hw.ac.uk
-            </p>
-
-            <p>
-                <a href="https://github.com/taliashlomovich" target="_blank">
-                    <ion-icon name="logo-github"></ion-icon>
-                    GitHub
-                </a>
-            </p>
-            <p>
-                <a href="https://linkedin.com/in/talshlo" target="_blank">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                    LinkedIn
-                </a>
-            </p>
-            </div>
-            
+        <main>           
             <div class = "intro">
-            <p>I am a second year PhD student at Heriot-Watt University, working in geometric group theory, under the supervision of <a href="https://www.mcordes.com/">Matthew Cordes</a>.</p>
-                
-            <p>
-                I am a member of the
+            <div>
+            <p>I am a second year PhD candidate in geometric group theory, based at Heriot-Watt University in Edinburgh. 
+                My supervisor is <a href="https://www.mcordes.com/">Matthew Cordes</a>.</p>
+            
+            <p>I am part of the
                 <a href="https://www.macs.hw.ac.uk/~lc45/Conferences/MAXIMALS.html">Algebra, Geometry and Topology group</a> at Heriot-Watt and the 
                 <a href="https://www.agq-cdt.org/">EPSRC Centre for Doctoral Training in Algebra, Geometry and Quantum Fields</a> 
                 (AGQ CDT), 
-                a joint programme with the University of Edinburgh and the University of Glasgow.
-            </p>        
-
-            <p>
-                I previously completed an Integrated Masters in Mathematics at the University of Warwick, where my <a href="MastersDissertation.pdf" target="_blank">Master's Dissertation</a> on the isoperimetric spectrum was supervised by <a href="http://www.robertkropholler.com/">Robert Kropholler</a>.
-            </p> 
-            <p>
+                with University of Edinburgh and Glasgow. This year, I am also one of the organisers of the <a href="https://sites.google.com/view/gears-seminar/home">GEARS seminar</a>.</p>
+           
+            <p>Previously, I completed an Integrated Masters in Mathematics at the University of Warwick, where my <a href="MastersDissertation.pdf" target="_blank">Master's Dissertation</a> on the isoperimetric spectrum was supervised by <a href="http://www.robertkropholler.com/">Robert Kropholler</a>.
+            Outside of maths, I am passionate about reading, birdwatching and (very occasionally) target shooting. 
+            </p>
+            
                 My <a href="https://drive.google.com/file/d/1QV1IHLnr0fegpxAUAdCzRc5lgEROwsHG/view?usp=drive_link">academic CV</a> is available at request here.
             </p>
             </div>
+            <div align="right">
+            <figure class="profile-pic-figure">
+            <img src="images/T_Regensburg.jpeg" alt="Talia">
+            </figure>
+            </div>
+            </div>
         </main>
         </div>
+        
+
         <footer class = "footer">
-              <p id="last-modified"></p>
-                  <script>
-                    // Get the last modified date of the document
-                    const lastModified = new Date(document.lastModified);
-                
-                    // Format to display month and year
-                    const options = { year: 'numeric', month: 'long' };
-                    const formattedDate = lastModified.toLocaleDateString('en-GB', options);
-                
-                    // Display in the paragraph element
-                    document.getElementById("last-modified").textContent = `Last updated: ${formattedDate}`;
-                  </script>
-                  © 2026 Talia Shlomovich 
-            </footer>
+                <a href="mailto:ls3007@hw.ac.uk" style="margin-right: 15px;">
+                    <ion-icon name="mail-outline" style="font-size: 30px;"></ion-icon>
+                </a>
+           
+                <a href="https://github.com/taliashlomovich" style="margin-right: 15px;">
+                    <ion-icon name="logo-github" style="font-size: 30px;"></ion-icon>
+                    
+                </a>
+          
+                <a href="https://linkedin.com/in/talshlo">
+                    <ion-icon name="logo-linkedin" style="font-size: 30px;"></ion-icon>
+                </a>
+        </footer>
         <script>
         function toggleNav() {
             document.querySelector('.nav-links').classList.toggle('show');
