@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
 
-/* ========================================================= VARIABLES ========================================================= */
+/* =========================================================
+   VARIABLES
+   ========================================================= */
 
 :root {
-  --bg: #fefbf4;
+  --bg: #FDFAF9;
 
   --text: #2C2820;
   --muted: #6E6560;
@@ -56,6 +58,39 @@
   --shadow-light: 0 2px 10px rgba(0,0,0,.40);
 }
 
+.darkmode {
+  --bg: #1A1517;
+  --bg-alt: #221B1E;
+  --bg-raised: #271F22;
+
+  --text: #EFE6E4;
+  --muted: #B3A2A4;
+
+  --primary: #D699AC;
+  --primary-hover: #E3B3C1;
+  --primary-soft: #3A2530;
+
+  --secondary: #B79AA6;
+
+  --accent: #B7A6C4;
+  --accent-hover: #C9BBD3;
+  --accent-soft: #2C2530;
+
+  --link: #D699AC;
+  --link-hover: #E3B3C1;
+
+  --link-underline: rgba(214,153,172,.28);
+  --link-underline-hover: rgba(227,179,193,.4);
+
+  --border: #3A3033;
+  --border-strong: #4A3E42;
+
+  --shadow-soft: 0 1px 2px rgba(0,0,0,.4),
+                 0 12px 28px rgba(0,0,0,.5);
+
+  --shadow-light: 0 1px 6px rgba(0,0,0,.35);
+}
+
 /* ========================================================= BASE ========================================================= */
 
 html {
@@ -94,7 +129,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: .035;
+  opacity: .03;
   background-image:
     radial-gradient(
       rgba(0,0,0,.08) .5px,
@@ -135,6 +170,7 @@ nav {
   top: 0;
   width: 100%;
   background: var(--bg);
+  border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
@@ -186,8 +222,13 @@ nav {
   transform-origin: left;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
   transform: scaleX(1);
+}
+
+.nav-links a.active {
+  color: var(--text);
 }
 
 /* ========================================================= THEME SWITCH ========================================================= */
@@ -199,8 +240,8 @@ nav {
 }
 
 #theme-switch {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   border: none;
   background: transparent;
@@ -211,7 +252,7 @@ nav {
 }
 
 #theme-switch:hover {
-  background: rgba(0,0,0,.05);
+  background: var(--primary-soft);
 }
 
 .darkmode #theme-switch:hover {
@@ -253,7 +294,8 @@ section:last-child {
   margin-bottom: 1rem;
 }
 
-/* ========================================================= HEADER ========================================================= */
+/* ========================================================= HEADER =========================================================
+   ========================================================= */
 
 header {
   margin-bottom: 2rem;
@@ -272,7 +314,27 @@ h2 {
   font-size: clamp(1.8rem, 2.2vw, 2.7rem);
   font-weight: 600;
   margin-top: 1.75rem;
-  margin-bottom: .85rem;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 1.5px solid var(--border-strong);
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.5px;
+  width: 34px;
+  height: 1.5px;
+}
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.25rem, 1.5vw, 1.6rem);
+  font-weight: 600;
+  margin-top: 1.4rem;
+  margin-bottom: .6rem;
 }
 
 .icon-label {
@@ -283,64 +345,129 @@ h2 {
   color: var(--muted);
 }
 
+.eyebrow {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--primary-hover);
+  margin-bottom: .5rem;
+}
+
+.darkmode .eyebrow {
+  color: var(--primary);
+}
+
 /* ========================================================= INTRO ========================================================= */
 
 .intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 500px;
-  gap: 5rem;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 3.5rem;
   align-items: start;
   max-width: 100%;
 }
 
-.profile-pic-figure {
-  width: 100%;
-  max-width: 500px;
-  margin: 0;
-}
-
-.profile-pic-figure img {
-  width: 100%;
-  display: block;
-  border-radius: 2px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-}
-
-.profile-pic-figure figcaption {
-  margin-top: .7rem;
-  font-size: .8rem;
-  color: var(--muted);
-  text-align: center;
-}
-
-/* ========================================================= CONTACT BOX ========================================================= */
+/* ========================================================= CONTACT CARD =========================================================
+   ========================================================= */
 
 .contact-box {
-  float: right;
-  width: 220px;
-  margin: .6rem 0 1.8rem 2rem;
-  padding: 1rem 1.15rem;
-  font-size: .9rem;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 0 1.8rem auto;
+  padding: 1.6rem 1.5rem 1.4rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.contact-box .contact-photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto .9rem;
+  border: 1px solid var(--border-strong);
+}
+
+.contact-box .contact-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: .15rem;
+}
+
+.contact-box .contact-title {
+  text-align: center;
+  font-size: .85rem;
   color: var(--muted);
-  border-left: 2px solid var(--accent);
+  margin-bottom: 1.1rem;
+  line-height: 1.5;
+}
+
+.contact-box hr {
+  border: none;
+  border-top: 1px solid var(--border-strong);
+  margin: 0 0 1rem;
 }
 
 .contact-box strong {
   display: block;
   margin-bottom: .75rem;
   color: var(--text);
+  font-size: .78rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.contact-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-box li {
+  margin-bottom: .55rem;
 }
 
 .contact-box a {
   display: flex;
-  gap: .5rem;
+  gap: .6rem;
   align-items: center;
-  color: var(--muted);
+  color: var(--text);
+  font-size: .89rem;
+  text-decoration: none;
 }
 
 .contact-box a:hover {
-  color: var(--accent);
+  color: var(--primary-hover);
+}
+
+.contact-box a .contact-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+
+.contact-box a:hover .contact-icon {
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+}
+
+.contact-box a .contact-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
 }
 
 /* ========================================================= TEXT ========================================================= */
@@ -353,7 +480,35 @@ strong {
   font-weight: 600;
 }
 
+blockquote {
+  margin: 1.8rem 0;
+  padding: .3rem 0 .3rem 1.3rem;
+  border-left: 2px solid var(--primary);
+  color: var(--muted);
+  font-style: italic;
+}
+
 /* ========================================================= FIGURES ========================================================= */
+.profile-pic-figure {
+  width: 100%;
+  max-width: 380px;
+  margin: 0;
+}
+ 
+.profile-pic-figure img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-light);
+}
+ 
+.profile-pic-figure figcaption {
+  margin-top: .7rem;
+  font-size: .8rem;
+  color: var(--muted);
+  text-align: center;
+}
 
 figure.figure-small {
   margin: 2.7rem auto;
@@ -362,14 +517,14 @@ figure.figure-small {
 
 figure.figure-small img {
   width: min(100%, 430px);
-  border-radius: 14px;
+  border-radius: 6px;
   border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
 }
 
 figure.figure-small figcaption {
   font-size: .84rem;
   color: var(--muted);
+  margin-top: .6rem;
 }
 
 /* ========================================================= LISTS ========================================================= */
@@ -383,13 +538,114 @@ li {
   margin-bottom: .45rem;
 }
 
+/* ========================================================= BADGES / TAGS ========================================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: .28rem .75rem;
+  border-radius: 100px;
+  font-size: .78rem;
+  font-weight: 500;
+  background: var(--primary-soft);
+  color: var(--primary-hover);
+  margin: 0 .4rem .4rem 0;
+}
+
+.badge.badge-accent {
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+}
+
+.darkmode .badge {
+  color: var(--primary);
+}
+
+.darkmode .badge.badge-accent {
+  color: var(--accent);
+}
+
+/* ========================================================= SECTION DIVIDER ========================================================= */
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  margin: 3rem 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  height: 1px;
+  width: 64px;
+  background: var(--border);
+}
+
+.section-divider span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
 /* ========================================================= FOOTER ========================================================= */
 
 .footer {
   text-align: center;
-  padding: 1rem;
   color: var(--muted);
   font-size: .9rem;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .5rem 1.6rem;
+  margin-bottom: .9rem;
+}
+ 
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .3rem .2rem;
+  color: var(--muted);
+  font-size: .88rem;
+  text-decoration: none;
+}
+ 
+.footer-icons a:hover {
+  color: var(--primary-hover);
+}
+ 
+.footer-icons a .footer-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-soft);
+  color: var(--primary);
+}
+ 
+.footer-icons a:hover .footer-icon {
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+}
+ 
+.footer-icons a svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+ 
+.footer-text {
+  color: var(--muted);
 }
 
 /* ========================================================= HAMBURGER ========================================================= */
@@ -431,13 +687,7 @@ li {
 
   .intro {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-   .profile-pic-figure {
-    width: 100%;
-    max-width: 340px;
-    margin: 0 auto;
+    gap: 2rem;
   }
 
   .intro > :first-child {
@@ -445,8 +695,7 @@ li {
   }
 
   .contact-box {
-    float: none;
-    width: min(100%, 280px);
+    max-width: min(100%, 300px);
     margin: 0 auto 1.6rem auto;
   }
 
@@ -474,12 +723,7 @@ li {
 
   .intro {
     grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .profile-pic-figure {
-    max-width: 380px;
-    margin: 0 auto;
+    gap: 2.5rem;
   }
 
   .intro > :first-child {
@@ -487,8 +731,7 @@ li {
   }
 
   .contact-box {
-    float: none;
-    width: min(100%, 320px);
+    max-width: min(100%, 320px);
     margin: 0 auto 1.6rem auto;
   }
 
@@ -510,12 +753,12 @@ li {
 @media (min-width: 1025px) and (max-width: 1199px) {
 
   .intro {
-    grid-template-columns: minmax(0, 1fr) 380px;
-    gap: 3.5rem;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 2.5rem;
   }
 
-  .profile-pic-figure {
-    max-width: 380px;
+  .contact-box {
+    max-width: 270px;
   }
 }
 
@@ -541,8 +784,8 @@ li {
   }
 
   .intro {
-    grid-template-columns: minmax(0, 1fr) 600px;
-    gap: 5rem;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 4rem;
   }
 
   body {
@@ -551,6 +794,7 @@ li {
 }
 
 /*========================================================= PROJECT CARD ========================================================= */
+
 .project-card {
     border-left: 2px solid var(--border);
     padding: 0 0 0 1.4rem;
@@ -558,7 +802,7 @@ li {
 }
 
 .project-card:hover {
-    border-left-color: var(--accent);
+    border-left-color: var(--primary);
 }
 
 .project-header {
@@ -572,7 +816,7 @@ li {
 
 .project-title {
     margin: 0;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Source Sans 3', sans serif;
     font-size: clamp(1.15rem, 1.3vw, 1.4rem);
     font-weight: 600;
 }
@@ -601,28 +845,29 @@ li {
 .project-meta span:not(:last-child)::after {
     content: "·";
     margin-left: .5rem;
-    color: var(--border);
+    color: var(--border-strong);
 }
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0 .6rem;
+    gap: .4rem;
     margin-bottom: 0.85rem;
-    font-size: .8rem;
+    font-size: .78rem;
 }
 
 .project-tags span {
-    color: var(--muted);
+    padding: .22rem .65rem;
+    border-radius: 100px;
+    background: var(--primary-soft);
+    color: var(--primary-hover);
     text-transform: uppercase;
-    letter-spacing: .06em;
+    letter-spacing: .05em;
 }
 
-.project-tags span:not(:last-child)::after {
-    content: "";
-    margin-left: .6rem;
-    border-right: 1px solid var(--border);
+.darkmode .project-tags span {
+    color: var(--primary);
 }
 
 .project-links {
