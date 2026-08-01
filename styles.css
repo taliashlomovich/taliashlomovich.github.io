@@ -285,10 +285,6 @@ h2 {
 
 /* ========================================================= INTRO ========================================================= */
 
-/* ========================================================= INTRO ========================================================= */
-
-/* ========================================================= INTRO ========================================================= */
-
 .intro {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 500px;
@@ -434,14 +430,14 @@ li {
   }
 
   .intro {
-    grid-template-columns: minmax(0, 1fr) 420px;
-    gap: 4rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
    .profile-pic-figure {
     width: 100%;
-    max-width: none;
-    margin: 0;
+    max-width: 340px;
+    margin: 0 auto;
   }
 
   .intro > :first-child {
@@ -455,12 +451,71 @@ li {
   }
 
   h1 {
-    font-size: clamp(2.8rem, 10vw, 4rem);
+    font-size: clamp(2.5rem, 11vw, 3.4rem);
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
   }
 
   .content {
     width: 94%;
     padding-top: 80px;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+  }
+}
+
+/* ========================================================= TABLET ========================================================= */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .profile-pic-figure {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .intro > :first-child {
+    order: 1;
+  }
+
+  .contact-box {
+    float: none;
+    width: min(100%, 320px);
+    margin: 0 auto 1.6rem auto;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 7vw, 4.2rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .content {
+    width: 90%;
+  }
+}
+
+/* ========================================================= SMALL LAPTOP ========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+
+  .intro {
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 3.5rem;
+  }
+
+  .profile-pic-figure {
+    max-width: 380px;
   }
 }
 
@@ -497,7 +552,7 @@ li {
 
 /*========================================================= PROJECT CARD ========================================================= */
 .project-card {
-    border-left: 3px solid #333;
+    border-left: 3px solid var(--accent);
     padding: 1.25rem 1.5rem;
     margin: 2rem 0;
     background: var(--bg);
@@ -506,7 +561,7 @@ li {
 
 .project-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-light);
 }
 
 .project-header {
@@ -515,24 +570,26 @@ li {
     align-items: baseline;
     gap: 1rem;
     margin-bottom: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .project-title {
     margin: 0;
-    font-size: 1.35rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.3rem, 1.6vw, 1.7rem);
     font-weight: 600;
 }
 
 .project-date {
-    color: #666;
-    font-size: 0.95rem;
+    color: var(--muted);
+    font-size: 0.9rem;
     white-space: nowrap;
 }
 
 .project-description {
     line-height: 1.6;
     margin: 0.75rem 0 1rem;
-    color: #333;
+    color: var(--text);
 }
 
 .project-meta {
@@ -540,7 +597,7 @@ li {
     flex-wrap: wrap;
     gap: 0.75rem 1.5rem;
     font-size: 0.9rem;
-    color: #555;
+    color: var(--muted);
     margin-bottom: 1rem;
 }
 
@@ -562,6 +619,7 @@ li {
 .project-links {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .project-links a {
@@ -573,5 +631,3 @@ li {
 .project-links a:hover {
     opacity: 0.7;
 }
-
-
