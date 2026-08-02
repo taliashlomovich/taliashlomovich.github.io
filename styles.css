@@ -5,89 +5,70 @@
    ========================================================= */
 
 :root {
-  --bg: #FDFAF9;
-
-  --text: #2C2820;
-  --muted: #6E6560;
-
-  --primary: #31654F;
-  --secondary: #91A99B;
-
-  --link: #31654F;
-  --link-hover: #445A51;
-
-  --link-underline: rgba(90, 114, 104, 0.24);
-  --link-underline-hover: rgba(68, 90, 81, 0.36);
-
-  --accent: #31654F;
-  --accent-soft: #F2EAE8;
-
-  --border: #DDD8CF;
-
-  --shadow-soft: 0 1px 2px rgba(0,0,0,.04),
-                 0 14px 32px rgba(0,0,0,.06);
-
-  --shadow-light: 0 2px 10px rgba(0,0,0,.05);
-
+  --bg: #FEFBFB;
+  --bg-alt: #FAF1EF;
+  --bg-raised: #FFFFFF;
+ 
+  --text: #1E2430;
+  --muted: #6E7484;
+ 
+  --primary: #4175b6;     
+  --primary-hover: #15304F;
+  --primary-soft: #E3E9F0;
+ 
+  --secondary: #B08A5A;    
+ 
+  --accent: #D98878;        
+  --accent-hover: #C06B58;
+  --accent-soft: #F8E7E1;
+ 
+  --link: #1a5093;
+  --link-hover: #15304F;
+ 
+  --link-underline: rgba(34, 67, 107, 0.3);
+  --link-underline-hover: rgba(21, 48, 79, 0.42);
+ 
+  --border: #EFDCD8;
+  --border-strong: #DFC5C0;
+ 
+  --shadow-soft: 0 1px 2px rgba(20,25,35,.05),
+                 0 10px 24px rgba(20,25,35,.06);
+ 
+  --shadow-light: 0 1px 6px rgba(20,25,35,.06);
+ 
   --content-width: 1450px;
 }
-
+ 
 .darkmode {
-  --bg: #141310;
-
-  --text: #EDE8E0;
-  --muted: #B5AFA5;
-
-  --primary: #9DBFB0;
-  --secondary: #91A99B;
-
-  --link: #9DBFB0;
-  --link-hover: #BBCFC5;
-
-  --link-underline: rgba(157,191,176,.25);
-  --link-underline-hover: rgba(187,207,197,.36);
-
-  --accent: #C4A0AE;
-  --accent-soft: #2C2226;
-
-  --border: #38332C;
-
-  --shadow-soft: 0 1px 2px rgba(0,0,0,.50),
-                 0 16px 36px rgba(0,0,0,.60);
-
-  --shadow-light: 0 2px 10px rgba(0,0,0,.40);
-}
-
-.darkmode {
-  --bg: #1A1517;
-  --bg-alt: #221B1E;
-  --bg-raised: #271F22;
-
-  --text: #EFE6E4;
-  --muted: #B3A2A4;
-
-  --primary: #D699AC;
-  --primary-hover: #E3B3C1;
-  --primary-soft: #3A2530;
-
-  --secondary: #B79AA6;
-
-  --accent: #B7A6C4;
-  --accent-hover: #C9BBD3;
-  --accent-soft: #2C2530;
-
-  --link: #D699AC;
-  --link-hover: #E3B3C1;
-
-  --link-underline: rgba(214,153,172,.28);
-  --link-underline-hover: rgba(227,179,193,.4);
-
-  --border: #3A3033;
-  --border-strong: #4A3E42;
-
+  --bg: #12161D;
+  --bg-alt: #181D26;
+  --bg-raised: #1E2430;
+ 
+  --text: #E9EDF3;
+  --muted: #9CA6B8;
+ 
+  --primary: #6E9BC9;
+  --primary-hover: #8FB4DA;
+  --primary-soft: #1E2C3E;
+ 
+  --secondary: #C9A876;
+ 
+  --accent: #E3A99A;
+  --accent-hover: #EDBBAE;
+  --accent-soft: #33221E;
+ 
+  --link: #6E9BC9;
+  --link-hover: #8FB4DA;
+ 
+  --link-underline: rgba(110,155,201,.3);
+  --link-underline-hover: rgba(143,180,218,.42);
+ 
+  --border: #262C36;
+  --border-strong: #333B47;
+ 
   --shadow-soft: 0 1px 2px rgba(0,0,0,.4),
                  0 12px 28px rgba(0,0,0,.5);
-
+ 
   --shadow-light: 0 1px 6px rgba(0,0,0,.35);
 }
 
@@ -629,8 +610,6 @@ li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--primary-soft);
-  color: var(--primary);
 }
  
 .footer-icons a:hover .footer-icon {
@@ -641,7 +620,6 @@ li {
 .footer-icons a svg {
   width: 15px;
   height: 15px;
-  fill: currentColor;
 }
  
 .footer-text {
